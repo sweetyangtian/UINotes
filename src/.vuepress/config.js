@@ -1,24 +1,35 @@
 module.exports = {
     title: '笔记文档',  // 设置网站标题
+    description: '随便写写的随手笔记',
     base:'/UINotes/',
     repo:
    'https://github.com/sweetyangtian/UINotes', // 添加 github 链接
    dest:'./docs',
     themeConfig: {
       displayAllHeaders: true,
-      // 添加导航栏  { text: '框架', link: '/' }
       nav: [
-        { text: '公共组件', link: '/commonCom/' },
-  
+        { text: '开发规范', link: '/develop/' },
+        { text: '工具', link: '/devUtils/' },
       ],
-      // 每个导航栏对应不同侧边栏
+      // 侧边栏
       sidebar:{
         '/commonCom/':[
-          ['','公共组件'],
+          ['','FormField'],
           ['ExportList','ExportList'],
           ['Filter','Filter'],
-          ['formField','formField']
+          ['Ellipsis','Ellipsis']
         ],
+        '/develop/':[
+          ['', 'GIT'],
+          ['js','JS'],
+          ['css','CSS']
+        ],
+        '/devUtils/':[
+          ['', '在线工具'],
+          ['exportAjax', '工具类'], 
+          ['html2canvas', 'html2canvas'],
+          ['vuePress','vuePress']
+        ]
       }
   
     }

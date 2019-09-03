@@ -1,13 +1,13 @@
 ---
 home: true
 actionText: 开始学习 →
-actionLink: /learnNote/
+actionLink: /develop/
 features:
-- title: 学习笔记
+- title: 公共组件
   details: 杂记
-- title: 框架
-  details: Vue react angular
-- title: JavaScript
-  details: JavaScript
+- title: 开发规范
+  details: git，js，css 开发规范
+- title: More
+  details: More 
 footer: Good good study ， Day day up
 ---

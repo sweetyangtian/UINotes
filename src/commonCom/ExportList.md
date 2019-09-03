@@ -1,11 +1,11 @@
-## 导出 ExportList
-
-```js
-    <ExportList params={obj} url="/api/ats/" title="xx数据导出" />
-```
-::: tip 
+# ExportList
+::: tip label : "导出"
 注意：必须引入 exportAjax 方法
 :::
+使用示例：
+```jsx 
+    <ExportList params={obj} url="/api/ats/" title="xx数据导出" />
+```
 
 | 参数名    | 说明                  | 必需   | 类型     | 备注             |
 |--------|---------------------|------|--------|----------------|

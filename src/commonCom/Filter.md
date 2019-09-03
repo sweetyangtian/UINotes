@@ -1,6 +1,8 @@
-## 表格过滤器 Filter
-
-```js
+# Filter
+::: tip 
+表格过滤器
+:::
+```jsx 
 <Filter text="" type="" list={[]} onFilter={} />
 ```
 
