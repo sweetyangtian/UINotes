@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>笔记文档 | 代码风格</title>
+    <meta name="description" content="随便写写的随手笔记">
+    
+    
+    <link rel="preload" href="/UINotes/assets/css/styles.1660144f.css" as="style"><link rel="preload" href="/UINotes/assets/js/app.1660144f.js" as="script"><link rel="preload" href="/UINotes/assets/js/11.c6df4b1e.js" as="script"><link rel="prefetch" href="/UINotes/assets/js/1.8000f259.js"><link rel="prefetch" href="/UINotes/assets/js/10.62f4916a.js"><link rel="prefetch" href="/UINotes/assets/js/12.8ca9cb14.js"><link rel="prefetch" href="/UINotes/assets/js/2.1fb192f9.js"><link rel="prefetch" href="/UINotes/assets/js/3.5ad2c6b0.js"><link rel="prefetch" href="/UINotes/assets/js/4.9e8a1fe4.js"><link rel="prefetch" href="/UINotes/assets/js/5.57960f2b.js"><link rel="prefetch" href="/UINotes/assets/js/6.936dd7b4.js"><link rel="prefetch" href="/UINotes/assets/js/7.0e6b7a94.js"><link rel="prefetch" href="/UINotes/assets/js/8.5d489166.js"><link rel="prefetch" href="/UINotes/assets/js/9.c8e34b50.js">
+    <link rel="stylesheet" href="/UINotes/assets/css/styles.1660144f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/UINotes/" class="home-link router-link-active"><!----><span class="site-name">
+      笔记文档
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/UINotes/develop/" class="nav-link router-link-active">开发规范</a></div><div class="nav-item"><a href="/UINotes/devUtils/" class="nav-link">工具</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/UINotes/develop/" class="nav-link router-link-active">开发规范</a></div><div class="nav-item"><a href="/UINotes/devUtils/" class="nav-link">工具</a></div><!----></nav><ul class="sidebar-links"><li><a href="/UINotes/develop/" class="sidebar-link">GIT</a></li><li><a href="/UINotes/develop/js.html" class="sidebar-link">JS</a></li><li><a href="/UINotes/develop/css.html" class="active sidebar-link">CSS</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#缩进" class="sidebar-link">缩进</a></li><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#空格" class="sidebar-link">空格</a></li><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#选择器" class="sidebar-link">选择器</a></li><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#属性" class="sidebar-link">属性</a></li><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#属性缩写" class="sidebar-link">属性缩写</a></li><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#属性书写顺序" class="sidebar-link">属性书写顺序</a></li><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#important" class="sidebar-link">!important</a></li><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#值与单位" class="sidebar-link">值与单位</a></li><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#文本编排" class="sidebar-link">文本编排</a></li><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#响应式" class="sidebar-link">响应式</a></li><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#兼容性" class="sidebar-link">兼容性</a></li><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#备注" class="sidebar-link">备注</a></li><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#demo" class="sidebar-link">demo</a></li><li class="sidebar-sub-header"><a href="/UINotes/develop/css.html#less-sass-编码规范" class="sidebar-link">Less/Sass 编码规范</a></li></ul></li></ul></div><div class="page"><div class="content"><h1 id="代码风格"><a href="#代码风格" aria-hidden="true" class="header-anchor">#</a> 代码风格</h1><p>##文件
+[建议] 全局文件放在 src/style 目录下，其他的跟随组件存在。
+解释：</p><p>style 目录下面，只能出现全局样式 出现在全局目录下，注意防止全局污染。</p><p>！！！组件/ 模板样式 不能出现全局样式</p><h2 id="缩进"><a href="#缩进" aria-hidden="true" class="header-anchor">#</a> 缩进</h2><p>[强制] 使用 4 个空格做为一个缩进层级，不允许使用 2 个空格 或 tab 字符。</p><pre><code>.selector {
+    margin: 0;
+    padding: 0;
+}
+</code></pre><h2 id="空格"><a href="#空格" aria-hidden="true" class="header-anchor">#</a> 空格</h2><p>[强制] 选择器 与 { 之间必须包含空格。
+[强制] 属性名 与之后的 : 之间不允许包含空格， : 与 属性值 之间必须包含空格。
+[强制] 列表型属性值 书写在单行时，, 后必须跟一个空格。</p><pre><code>.selector {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+</code></pre><h2 id="选择器"><a href="#选择器" aria-hidden="true" class="header-anchor">#</a> 选择器</h2><p>[强制] 当一个 rule 包含多个 selector 时，每个选择器声明必须独占一行。</p><pre><code>/* good */
+.post,
+.page,
+.comment {
+    line-height: 1.5;
+}
+
+/* bad */
+.post, .page, .comment {
+    line-height: 1.5;
+}
+</code></pre><p>[强制] &gt;、+、~ 选择器的两边各保留一个空格。</p><pre><code>/* good */
+main &gt; nav {
+    padding: 10px;
+}
+
+label + input {
+    margin-left: 5px;
+}
+
+input:checked ~ button {
+    background-color: #69C;
+}
+
+/* bad */
+main&gt;nav {
+    padding: 10px;
+}
+
+label+input {
+    margin-left: 5px;
+}
+
+input:checked~button {
+    background-color: #69C;
+}
+</code></pre><p>[强制] 属性选择器中的值必须用双引号包围。</p><p>解释：不允许使用单引号，不允许不使用引号。</p><pre><code>/* good */
+article[character=&quot;juliet&quot;] {
+    voice-family: &quot;Vivien Leigh&quot;, victoria, female;
+}
+
+/* bad */
+article[character='juliet'] {
+    voice-family: &quot;Vivien Leigh&quot;, victoria, female;
+}
+</code></pre><h2 id="属性"><a href="#属性" aria-hidden="true" class="header-anchor">#</a> 属性</h2><p>[强制] 属性定义必须另起一行。</p><pre class="language-text"><code>    /* good */
+    .selector {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* bad */
+    .selector { margin: 0; padding: 0; }
+</code></pre><p>[强制] 属性定义后必须以分号结尾。</p><pre class="language-text"><code>    /* good */
+    .selector {
+        margin: 0;
+    }
+
+    /* bad */
+    .selector {
+        margin: 0
+    }
+</code></pre><h2 id="属性缩写"><a href="#属性缩写" aria-hidden="true" class="header-anchor">#</a> 属性缩写</h2><p>[建议] 在可以使用缩写的情况下，尽量使用属性缩写。</p><pre><code>/* good */
+.post {
+    font: 12px/1.5 arial, sans-serif;
+}
+
+/* bad */
+.post {
+    font-family: arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+</code></pre><p>[建议] 使用 border / margin / padding 等缩写时，应注意隐含值对实际数值的影响，确实需要设置多个方向的值时才使用缩写。</p><p>解释：border / margin / padding 等缩写会同时设置多个属性的值，容易覆盖不需要覆盖的设定。如某些方向需要继承其他声明的值，则应该分开设置。</p><pre><code>/* centering &lt;article class=&quot;page&quot;&gt; horizontally and highlight featured ones */
+article {
+    margin: 5px;
+    border: 1px solid #999;
+}
+
+/* good */
+.page {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.featured {
+    border-color: #69c;
+}
+
+/* bad */
+.page {
+    margin: 5px auto; /* introducing redundancy */
+}
+
+.featured {
+    border: 1px solid #69c; /* introducing redundancy */
+}
+</code></pre><h2 id="属性书写顺序"><a href="#属性书写顺序" aria-hidden="true" class="header-anchor">#</a> 属性书写顺序</h2><p>[建议] 同一 rule set 下的属性在书写时，应按功能进行分组，并以 Formatting Model（布局方式、位置） &gt; Box Model（尺寸） &gt; Typographic（文本相关） &gt; Visual（视觉效果） 的顺序书写，以提高代码的可读性。</p><ul><li>解释：
+<ul><li><p>Formatting Model 相关属性包括：position / top / right / bottom / left / float / display / overflow 等</p></li><li><p>Box Model 相关属性包括：border / margin / padding / width / height 等</p></li><li><p>Typographic 相关属性包括：font / line-height / text-align / word-wrap 等</p></li><li><p>Visual 相关属性包括：background / color / transition / list-style 等</p></li><li><p>另外，如果包含 content 属性，应放在最前面。</p><p>.sidebar {
+/* formatting model: positioning schemes / offsets / z-indexes / display / ... */
+position: absolute;
+top: 50px;
+left: 0;
+overflow-x: hidden;</p><pre><code>/* box model: sizes / margins / paddings / borders / ... */
+width: 200px;
+padding: 5px;
+border: 1px solid #ddd;
+
+/* typographic: font / aligns / text styles / ... */
+font-size: 14px;
+line-height: 20px;
+
+/* visual: colors / shadows / gradients / ... */
+background: #f5f5f5;
+color: #333;
+-webkit-transition: color 1s;
+-moz-transition: color 1s;
+        transition: color 1s;
+</code></pre><p>}</p></li></ul></li></ul><h2 id="important"><a href="#important" aria-hidden="true" class="header-anchor">#</a> !important</h2><p>[建议] 尽量不使用 !important 声明。</p><p>一定要使用的话： 1、出现在全局样式上（全局样式，考虑是否存在污染） 2、出现在内联样式上</p><h2 id="值与单位"><a href="#值与单位" aria-hidden="true" class="header-anchor">#</a> 值与单位</h2><h3 id="文本"><a href="#文本" aria-hidden="true" class="header-anchor">#</a> 文本</h3><p>[强制] 文本内容必须用双引号包围。</p><p>解释：文本类型的内容可能在选择器、属性值等内容中。</p><pre><code>/* good */
+html[lang|=&quot;zh&quot;] q:before {
+    font-family: &quot;Microsoft YaHei&quot;, sans-serif;
+    content: &quot;“&quot;;
+}
+
+
+/* bad */
+html[lang|=zh] q:before {
+    font-family: 'Microsoft YaHei', sans-serif;
+    content: '“';
+}
+</code></pre><h3 id="数值"><a href="#数值" aria-hidden="true" class="header-anchor">#</a> 数值</h3><p>[强制] 当数值为 0 - 1 之间的小数时，省略整数部分的 0。
+示例：</p><pre><code>/* good */
+panel {
+    opacity: .8;
+}
+
+/* bad */
+panel {
+    opacity: 0.8;
+}
+</code></pre><h3 id="url"><a href="#url" aria-hidden="true" class="header-anchor">#</a> url()</h3><p>[强制] url() 函数中的路径不加引号。</p><pre><code>body {
+    background: url(bg.png);
+}
+</code></pre><p>[建议] url() 函数中的绝对路径可省去协议名。</p><pre><code>body {
+    background: url(//baidu.com/img/bg.png) no-repeat 0 0;
+}
+</code></pre><h3 id="长度"><a href="#长度" aria-hidden="true" class="header-anchor">#</a> 长度</h3><p>[强制] 长度为 0 时须省略单位。 (也只有长度单位可省)</p><pre><code>/* good */
+body {
+    padding: 0 5px;
+}
+
+/* bad */
+body {
+    padding: 0px 5px;
+}
+</code></pre><h3 id="颜色"><a href="#颜色" aria-hidden="true" class="header-anchor">#</a> 颜色</h3><p>[强制] RGB颜色值必须使用十六进制记号形式 #rrggbb。不允许使用 rgb()。
+解释：</p><p>带有alpha的颜色信息可以使用 rgba()。使用 rgba() 时每个逗号后必须保留一个空格。</p><pre><code>/* good */
+.success {
+    box-shadow: 0 0 2px rgba(0, 128, 0, .3);
+    border-color: #008000;
+}
+
+/* bad */
+.success {
+    box-shadow: 0 0 2px rgba(0,128,0,.3);
+    border-color: rgb(0, 128, 0);
+}
+</code></pre><p>[强制] 颜色值可以缩写时，必须使用缩写形式。</p><pre><code>/* good */
+.success {
+    background-color: #aca;
+}
+
+/* bad */
+.success {
+    background-color: #aaccaa;
+}
+</code></pre><p>[强制] 颜色值不允许使用命名色值。</p><pre><code>/* good */
+.success {
+    color: #90ee90;
+}
+
+/* bad */
+.success {
+    color: lightgreen;
+}
+</code></pre><p>[建议] 颜色值中的英文字符采用小写。如不用小写也需要保证同一项目内保持大小写一致。</p><pre><code>/* good */
+.success {
+    background-color: #aca;
+    color: #90ee90;
+}
+
+/* good */
+.success {
+    background-color: #ACA;
+    color: #90EE90;
+}
+
+/* bad */
+.success {
+    background-color: #ACA;
+    color: #90ee90;
+}
+</code></pre><h3 id="_2d-位置"><a href="#_2d-位置" aria-hidden="true" class="header-anchor">#</a> 2D 位置</h3><p>[强制] 必须同时给出水平和垂直方向的位置。
+解释：</p><p>2D 位置初始值为 0% 0%，但在只有一个方向的值时，另一个方向的值会被解析为 center。为避免理解上的困扰，应同时给出两个方向的值。background-position属性值的定义</p><pre><code>/* good */
+body {
+    background-position: center top; /* 50% 0% */
+}
+
+/* bad */
+body {
+    background-position: top; /* 50% 0% */
+}
+</code></pre><h2 id="文本编排"><a href="#文本编排" aria-hidden="true" class="header-anchor">#</a> 文本编排</h2><h3 id="字体族"><a href="#字体族" aria-hidden="true" class="header-anchor">#</a> 字体族</h3><p>[强制] font-family 属性中的字体族名称应使用字体的英文 Family Name，其中如有空格，须放置在引号中。
+解释：</p><p>所谓英文 Family Name，为字体文件的一个元数据，常见名称如下：</p><p>字体	操作系统	Family Name
+宋体 (中易宋体)	Windows	SimSun
+黑体 (中易黑体)	Windows	SimHei
+微软雅黑	Windows	Microsoft YaHei
+微软正黑	Windows	Microsoft JhengHei
+华文黑体	Mac/iOS	STHeiti
+冬青黑体	Mac/iOS	Hiragino Sans GB
+文泉驿正黑	Linux	WenQuanYi Zen Hei
+文泉驿微米黑	Linux	WenQuanYi Micro Hei</p><pre><code>h1 {
+    font-family: &quot;Microsoft YaHei&quot;;
+}
+</code></pre><p>[强制] font-family 按「西文字体在前、中文字体在后」、「效果佳 (质量高/更能满足需求) 的字体在前、效果一般的字体在后」的顺序编写，最后必须指定一个通用字体族( serif / sans-serif )。</p><pre><code>/* Display according to platform */
+.article {
+    font-family: Arial, sans-serif;
+}
+
+/* Specific for most platforms */
+h1 {
+    font-family: &quot;Helvetica Neue&quot;, Arial, &quot;Hiragino Sans GB&quot;, &quot;WenQuanYi Micro Hei&quot;, &quot;Microsoft YaHei&quot;, sans-serif;
+}
+</code></pre><p>[强制] font-family 不区分大小写，但在同一个项目中，同样的 Family Name 大小写必须统一。</p><pre><code>/* good */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-family: Arial, &quot;Microsoft YaHei&quot;, sans-serif;
+}
+
+/* bad */
+body {
+    font-family: arial, sans-serif;
+}
+
+h1 {
+    font-family: Arial, &quot;Microsoft YaHei&quot;, sans-serif;
+}
+</code></pre><h3 id="字号"><a href="#字号" aria-hidden="true" class="header-anchor">#</a> 字号</h3><p>[强制] 需要在 Windows 平台显示的中文内容，其字号应不小于 12px。
+解释：</p><p>由于 Windows 的字体渲染机制，小于 12px 的文字显示效果极差、难以辨认。</p><h3 id="字重"><a href="#字重" aria-hidden="true" class="header-anchor">#</a> 字重</h3><p>[强制] font-weight 属性必须使用数值方式描述。
+解释：</p><p>CSS 的字重分 100 – 900 共九档，但目前受字体本身质量和浏览器的限制，实际上支持 400 和 700 两档，分别等价于关键词 normal 和 bold。</p><pre><code>/* good */
+h1 {
+    font-weight: 700;
+}
+
+/* bad */
+h1 {
+    font-weight: bold;
+}
+</code></pre><h3 id="行高"><a href="#行高" aria-hidden="true" class="header-anchor">#</a> 行高</h3><p>[建议] line-height 在定义文本段落时，应使用数值。</p><pre><code>.container {
+    line-height: 1.5;
+}
+</code></pre><h2 id="响应式"><a href="#响应式" aria-hidden="true" class="header-anchor">#</a> 响应式</h2><p>[强制] Media Query 不得单独编排，必须与相关的规则一起定义。</p><pre><code>/* Good */
+/* header styles */
+@media (...) {
+    /* header styles */
+}
+
+/* main styles */
+@media (...) {
+    /* main styles */
+}
+
+/* footer styles */
+@media (...) {
+    /* footer styles */
+}
+
+
+/* Bad */
+/* header styles */
+/* main styles */
+/* footer styles */
+
+@media (...) {
+    /* header styles */
+    /* main styles */
+    /* footer styles */
+}
+</code></pre><p>[强制] Media Query 如果有多个逗号分隔的条件时，应将每个条件放在单独一行中。</p><pre><code>@media
+(-webkit-min-device-pixel-ratio: 2), /* Webkit-based browsers */
+(min--moz-device-pixel-ratio: 2),    /* Older Firefox browsers (prior to Firefox 16) */
+(min-resolution: 2dppx),             /* The standard way */
+(min-resolution: 192dpi) {           /* dppx fallback */
+    /* Retina-specific stuff here */
+}
+</code></pre><p>[建议] 尽可能给出在高分辨率设备 (Retina) 下效果更佳的样式。</p><h2 id="兼容性"><a href="#兼容性" aria-hidden="true" class="header-anchor">#</a> 兼容性</h2><h3 id="属性前缀"><a href="#属性前缀" aria-hidden="true" class="header-anchor">#</a> 属性前缀</h3><p>[强制] 带私有前缀的属性由长到短排列，按冒号位置对齐。
+解释：标准属性放在最后，按冒号对齐方便阅读，也便于在编辑器内进行多行编辑。</p><pre><code>.box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+</code></pre><h3 id="hack"><a href="#hack" aria-hidden="true" class="header-anchor">#</a> Hack</h3><p>[建议] 需要添加 hack 时应尽可能考虑是否可以采用其他方式解决。
+解释：</p><p>如果能通过合理的 HTML 结构或使用其他的 CSS 定义达到理想的样式，则不应该使用 hack 手段解决问题。通常 hack 会导致维护成本的增加。</p><p>[建议] 尽量使用 选择器 hack 处理兼容性，而非 属性 hack。
+解释：</p><p>尽量使用符合 CSS 语法的 selector hack，可以避免一些第三方库无法识别 hack 语法的问题。</p><pre><code>/* IE 7 */
+*:first-child + html #header {
+    margin-top: 3px;
+    padding: 5px;
+}
+
+/* IE 6 */
+* html #header {
+    margin-top: 5px;
+    padding: 4px;
+}
+</code></pre><p>[建议] 尽量使用简单的 属性 hack。
+示例：</p><pre><code>.box {
+    _display: inline; /* fix double margin */
+    float: left;
+    margin-left: 20px;
+}
+
+.container {
+    overflow: hidden;
+    *zoom: 1; /* triggering hasLayout */
+}
+</code></pre><h2 id="备注"><a href="#备注" aria-hidden="true" class="header-anchor">#</a> 备注</h2><p>布局（grid）（.g-）；
+模块（module）（.m-）；
+元件（unit）（.u-）；
+功能（function）（.f-）； //  只能出现在style 目录下，充分利用function
+皮肤（skin）（.s-）</p><h2 id="demo"><a href="#demo" aria-hidden="true" class="header-anchor">#</a> demo</h2><p>/* 布局 <em>/
+.g-sd{float:left;width:300px;}
+/</em> 模块 <em>/
+.m-logo{width:200px;height:50px;}
+/</em> 元件 <em>/
+.u-btn{height:20px;border:1px solid #333;}
+/</em> 功能 <em>/
+.f-tac{text-align:center;}
+/</em> 皮肤 */
+.s-fc,a.s-fc:hover{color:#fff;}</p><h2 id="less-sass-编码规范"><a href="#less-sass-编码规范" aria-hidden="true" class="header-anchor">#</a> Less/Sass 编码规范</h2><h3 id="代码组织"><a href="#代码组织" aria-hidden="true" class="header-anchor">#</a> 代码组织</h3><p>代码必须（MUST）按如下形式按顺序组织：</p><p>@import
+变量声明
+样式声明
+// ✓
+@import &quot;est/all.less&quot;;</p><pre><code>@default-text-color: #333;
+
+.page {
+    width: 960px;
+    margin: 0 auto;
+}
+</code></pre><p>@import 语句
+@import 语句引用的文件必须（MUST）写在一对引号内，.less 后缀不得（MUST NOT）省略（与引入 CSS 文件时的路径格式一致）。引号使用 ' 和 &quot;均可，但在同一项目内必须（MUST）统一。</p><pre><code>// ✗
+@import 'est/all';
+@import &quot;my/mixins.less&quot;;
+
+// ✓
+@import &quot;est/all.less&quot;;
+@import &quot;my/mixins.less&quot;;
+</code></pre><h3 id="空格-2"><a href="#空格-2" aria-hidden="true" class="header-anchor">#</a> 空格</h3><p>属性、变量
+选择器和 { 之间必须（MUST）保留一个空格。</p><p>属性名后的冒号（:）与属性值之间必须（MUST）保留一个空格，冒号前不得（MUST NOT）保留空格。</p><p>定义变量时冒号（:）与变量值之间必须（MUST）保留一个空格，冒号前不得（MUST NOT）保留空格。</p><p>在用逗号（,）分隔的列表（Less 函数参数列表、以 , 分隔的属性值等）中，逗号后必须（MUST）保留一个空格，逗号前不得（MUST NOT）保留空格。</p><pre><code>// ✗
+.box{
+    @w:50px;
+    @h :30px;
+    width:@w;
+    height :@h;
+    color: rgba(255,255,255,.3);
+    transition: width 1s,height 3s;
+}
+
+// ✓
+.box {
+    @w: 50px;
+    @h: 30px;
+    width: @w;
+    height: @h;
+    transition: width 1s, height 3s;
+}
+</code></pre><h3 id="运算"><a href="#运算" aria-hidden="true" class="header-anchor">#</a> 运算</h3><ul><li>/ - / * / / 四个运算符两侧必须（MUST）保留一个空格。+ / - 两侧的操作数必须（MUST）有相同的单位，如果其中一个是变量，另一个数值必须（MUST）书写单位。</li></ul><pre class="language-text"><code>    // ✗
+    @a: 200px;
+    @b: (@a+100)*2;
+
+    // ✓
+    @a: 200px;
+    @b: (@a + 100px) * 2;
+</code></pre><h3 id="嵌套和缩进"><a href="#嵌套和缩进" aria-hidden="true" class="header-anchor">#</a> 嵌套和缩进</h3><p>必须（MUST）采用 4 个空格为一次缩进， 不得（MUST NOT）采用 TAB 作为缩进。</p><p>嵌套的声明块前必须（MUST）增加一次缩进，有多个声明块共享命名空间时尽量（SHOULD）嵌套书写，避免选择器的重复。</p><p>但是需注意的是，尽量（SHOULD）仅在必须区分上下文时才引入嵌套关系（在嵌套书写前先考虑如果不能嵌套，会如何书写选择器）。</p><pre><code>// ✗
+.main .title {
+font-weight: 700;
+}
+
+.main .content {
+line-height: 1.5;
+}
+
+.main {
+    .warning {
+    font-weight: 700;
+    }
+}
+
+// ✓
+.main {
+    .title {
+        font-weight: 700;
+    }
+
+    .content {
+        line-height: 1.5;
+    }
+    
+    .warning {
+        font-weight: 700;
+    }
+}
+</code></pre><h3 id="变量"><a href="#变量" aria-hidden="true" class="header-anchor">#</a> 变量</h3><p>Less 的变量值总是以同一作用域下最后一个同名变量为准，务必注意后面的设定会覆盖所有之前的设定。</p><p>变量命名必须（MUST）采用 @foo-bar 形式，不得（MUST NOT）使用 @fooBar 形式。</p><pre><code>// ✗
+@sidebarWidth: 200px;
+@width:800px;
+
+// ✓
+@sidebar-width: 200px;
+@width: 800px;
+</code></pre><h3 id="继承"><a href="#继承" aria-hidden="true" class="header-anchor">#</a> 继承</h3><p>使用继承时，如果在声明块内书写 :extend 语句，必须（MUST）写在开头：</p><pre><code>// ✗
+.sub {
+    color: red;
+    &amp;:extend(.mod all);
+}
+
+// ✓
+.sub {
+    &amp;:extend(.mod all);
+    color: red;
+}
+</code></pre><h3 id="混入（mixin）"><a href="#混入（mixin）" aria-hidden="true" class="header-anchor">#</a> 混入（Mixin）</h3><p>在定义 mixin 时，如果 mixin 名称不是一个需要使用的 className，必须（MUST）加上括号，否则即使不被调用也会输出到 CSS 中。</p><pre><code>// ✗
+.big-text {
+    font-size: 2em;
+}
+
+h3 {
+    .big-text;
+}
+
+// ✓
+.big-text() {
+    font-size: 2em;
+}
+
+h3 {
+    .big-text();
+}
+</code></pre><p>如果混入的是本身不输出内容的 mixin，必须（MUST）在 mixin 后添加括号（即使不传参数），以区分这是否是一个 className（修改以后是否会影响 HTML）。</p><pre><code>// ✗
+.box {
+    .clearfix;
+    .size (20px);
+}
+
+// ✓
+.box {
+    .clearfix();
+    .size(20px);
+}
+</code></pre><p>Mixin 的参数分隔符使用 , 和 ; 均可，但在同一项目中必须（MUST）保持统一。</p><h3 id="注释"><a href="#注释" aria-hidden="true" class="header-anchor">#</a> 注释</h3><p>单行注释尽量（SHOULD）使用 // 方式。</p><pre><code>// Hide everything
+* {
+    display: none;
+}
+</code></pre></div><!----><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/UINotes/develop/js.html" class="prev">
+          JS
+        </a></span><!----></p></div></div></div></div>
+    <script src="/UINotes/assets/js/app.1660144f.js" defer></script><script src="/UINotes/assets/js/11.c6df4b1e.js" defer></script>
+  </body>
+</html>

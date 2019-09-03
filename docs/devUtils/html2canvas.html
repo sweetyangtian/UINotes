@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>笔记文档 | html2canvas</title>
+    <meta name="description" content="随便写写的随手笔记">
+    
+    
+    <link rel="preload" href="/UINotes/assets/css/styles.1660144f.css" as="style"><link rel="preload" href="/UINotes/assets/js/app.1660144f.js" as="script"><link rel="preload" href="/UINotes/assets/js/9.c8e34b50.js" as="script"><link rel="prefetch" href="/UINotes/assets/js/1.8000f259.js"><link rel="prefetch" href="/UINotes/assets/js/10.62f4916a.js"><link rel="prefetch" href="/UINotes/assets/js/11.c6df4b1e.js"><link rel="prefetch" href="/UINotes/assets/js/12.8ca9cb14.js"><link rel="prefetch" href="/UINotes/assets/js/2.1fb192f9.js"><link rel="prefetch" href="/UINotes/assets/js/3.5ad2c6b0.js"><link rel="prefetch" href="/UINotes/assets/js/4.9e8a1fe4.js"><link rel="prefetch" href="/UINotes/assets/js/5.57960f2b.js"><link rel="prefetch" href="/UINotes/assets/js/6.936dd7b4.js"><link rel="prefetch" href="/UINotes/assets/js/7.0e6b7a94.js"><link rel="prefetch" href="/UINotes/assets/js/8.5d489166.js">
+    <link rel="stylesheet" href="/UINotes/assets/css/styles.1660144f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/UINotes/" class="home-link router-link-active"><!----><span class="site-name">
+      笔记文档
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/UINotes/develop/" class="nav-link">开发规范</a></div><div class="nav-item"><a href="/UINotes/devUtils/" class="nav-link router-link-active">工具</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/UINotes/develop/" class="nav-link">开发规范</a></div><div class="nav-item"><a href="/UINotes/devUtils/" class="nav-link router-link-active">工具</a></div><!----></nav><ul class="sidebar-links"><li><a href="/UINotes/devUtils/" class="sidebar-link">在线工具</a></li><li><a href="/UINotes/devUtils/exportAjax.html" class="sidebar-link">工具类</a></li><li><a href="/UINotes/devUtils/html2canvas.html" class="active sidebar-link">html2canvas</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/UINotes/devUtils/html2canvas.html#图片的清晰度优化方案" class="sidebar-link">图片的清晰度优化方案</a></li></ul></li><li><a href="/UINotes/devUtils/vuePress.html" class="sidebar-link">vuePress</a></li></ul></div><div class="page"><div class="content"><h1 id="html2canvas"><a href="#html2canvas" aria-hidden="true" class="header-anchor">#</a> html2canvas</h1><p>实现功能：HTML页面保存为图片，常见于H5活动页的结尾页分享。
+官方github地址：<a href="https://github.com/niklasvh/html2canvas" target="_blank" rel="noopener noreferrer">https://github.com/niklasvh/html2canvas</a></p><p>第一步：html转为canvas</p><pre class="language-js"><code><span class="token function">html2canvas</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>body<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">canvas</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>canvas<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>第二步：canvas转image</p><p>转换方法有两种：</p><p>方法1：基于原生canvas的toDataURL方法将canvas输出为data: URI类型的图片地址，再将该图片地址赋值给image元素的src属性</p><p>方法2：借助第三方库<a href="https://github.com/hongru/canvas2image" target="_blank" rel="noopener noreferrer">Canvas2Image.js</a>，调用其convertToImage方法</p><pre class="language-js"><code>Canvas2Image<span class="token punctuation">.</span><span class="token function">convertToImage</span><span class="token punctuation">(</span>canvasObj<span class="token punctuation">,</span> width<span class="token punctuation">,</span> height<span class="token punctuation">,</span> type<span class="token punctuation">)</span>
+</code></pre><h2 id="图片的清晰度优化方案"><a href="#图片的清晰度优化方案" aria-hidden="true" class="header-anchor">#</a> 图片的清晰度优化方案</h2><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>最终图片的清晰度取决于第一步中html转换成的canvas的清晰度。</p></div><p>其基本原理为：
+将canvas的属性width和height属性放大为2倍，并设置style 控制页面显示的大小</p><pre><code>&lt;canvas width=&quot;320&quot; height=&quot;180&quot; style=&quot;width:160px;height:90px;&quot;&gt;&lt;/canvas&gt;
+</code></pre></div><!----><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/UINotes/devUtils/exportAjax.html" class="prev">
+          工具类
+        </a></span><span class="next"><a href="/UINotes/devUtils/vuePress.html">
+          vuePress
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/UINotes/assets/js/app.1660144f.js" defer></script><script src="/UINotes/assets/js/9.c8e34b50.js" defer></script>
+  </body>
+</html>
