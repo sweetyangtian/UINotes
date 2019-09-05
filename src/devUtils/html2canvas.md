@@ -33,6 +33,9 @@ Canvas2Image.convertToImage(canvasObj, width, height, type)
     <canvas width="320" height="180" style="width:160px;height:90px;"></canvas>
 
 
+### 参考文章
+
+[https://segmentfault.com/a/1190000011478657](https://segmentfault.com/a/1190000011478657)
 
 
 
