@@ -1,5 +1,3 @@
-## Git
-
 ## git修改密码
 
 修改git 已配置的用户密码
@@ -19,3 +17,10 @@
 恢复保存密码
 
     git config --global credential.helper store
+
+## windows下SSL证书问题
+错误：
+    SSL certificate problem: self signed certificate
+
+解决： 
+    git config --global http.sslVerify false

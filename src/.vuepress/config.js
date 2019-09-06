@@ -28,7 +28,8 @@ module.exports = {
           ['', '在线工具'],
           ['exportAjax', '工具类'], 
           ['html2canvas', 'html2canvas'],
-          ['vuePress','vuePress']
+          ['vuePress','vuePress'],
+          ['Git','git']
         ]
       }
   
