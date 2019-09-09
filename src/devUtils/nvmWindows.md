@@ -50,6 +50,11 @@ nvm-windows，用于Windows下的node版本管理。
 
 
 ## nvm下载使用node
+设置镜像
+
+    nvm node_mirror https://npm.taobao.org/mirrors/node/
+    nvm npm_mirror https://npm.taobao.org/mirrors/npm/
+
 常用命令
 
     nvm -v                      // 查看版本
