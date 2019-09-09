@@ -106,5 +106,3 @@ nvm-windows，用于Windows下的node版本管理。
 
 
 ![1.1.7](./imgs/nvm/12.jpg)
-
-压缩包：本文档的github项目根目录下nvm_zip文件夹
