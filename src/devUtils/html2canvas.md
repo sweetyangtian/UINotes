@@ -1,4 +1,4 @@
-# html2canvas
+## 使用
 
 实现功能：HTML页面保存为图片，常见于H5活动页的结尾页分享。
 官方github地址：[https://github.com/niklasvh/html2canvas](https://github.com/niklasvh/html2canvas)
@@ -33,7 +33,7 @@ Canvas2Image.convertToImage(canvasObj, width, height, type)
     <canvas width="320" height="180" style="width:160px;height:90px;"></canvas>
 
 
-### 参考文章
+## 参考文章
 
 [https://segmentfault.com/a/1190000011478657](https://segmentfault.com/a/1190000011478657)
 

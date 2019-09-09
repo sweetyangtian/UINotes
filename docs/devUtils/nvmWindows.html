@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>笔记文档 | nvm-Windows</title>
+    <meta name="description" content="随便写写的随手笔记">
+    
+    
+    <link rel="preload" href="/UINotes/assets/css/styles.0d7242df.css" as="style"><link rel="preload" href="/UINotes/assets/js/app.0d7242df.js" as="script"><link rel="preload" href="/UINotes/assets/js/1.12a0c242.js" as="script"><link rel="prefetch" href="/UINotes/assets/js/10.69a55189.js"><link rel="prefetch" href="/UINotes/assets/js/11.41000618.js"><link rel="prefetch" href="/UINotes/assets/js/12.7511caf4.js"><link rel="prefetch" href="/UINotes/assets/js/13.d779d43d.js"><link rel="prefetch" href="/UINotes/assets/js/14.20e93771.js"><link rel="prefetch" href="/UINotes/assets/js/2.4cbcfcd1.js"><link rel="prefetch" href="/UINotes/assets/js/3.2c1255fb.js"><link rel="prefetch" href="/UINotes/assets/js/4.f85375bc.js"><link rel="prefetch" href="/UINotes/assets/js/5.a00c3dd9.js"><link rel="prefetch" href="/UINotes/assets/js/6.a878e7dc.js"><link rel="prefetch" href="/UINotes/assets/js/7.ed2d9613.js"><link rel="prefetch" href="/UINotes/assets/js/8.0e7d0acd.js"><link rel="prefetch" href="/UINotes/assets/js/9.cd4dc40a.js">
+    <link rel="stylesheet" href="/UINotes/assets/css/styles.0d7242df.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/UINotes/" class="home-link router-link-active"><!----><span class="site-name">
+      笔记文档
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/UINotes/develop/" class="nav-link">开发规范</a></div><div class="nav-item"><a href="/UINotes/devUtils/" class="nav-link router-link-active">工具</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/UINotes/develop/" class="nav-link">开发规范</a></div><div class="nav-item"><a href="/UINotes/devUtils/" class="nav-link router-link-active">工具</a></div><!----></nav><ul class="sidebar-links"><li><a href="/UINotes/devUtils/" class="sidebar-link">在线工具</a></li><li><a href="/UINotes/devUtils/exportAjax.html" class="sidebar-link">工具类</a></li><li><a href="/UINotes/devUtils/html2canvas.html" class="sidebar-link">html2canvas</a></li><li><a href="/UINotes/devUtils/git.html" class="sidebar-link">Git</a></li><li><a href="/UINotes/devUtils/nvmWindows.html" class="active sidebar-link">nvm-Windows</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/UINotes/devUtils/nvmWindows.html#卸载原先安装的nodejs" class="sidebar-link">卸载原先安装的nodejs</a></li><li class="sidebar-sub-header"><a href="/UINotes/devUtils/nvmWindows.html#下载安装" class="sidebar-link">下载安装</a></li><li class="sidebar-sub-header"><a href="/UINotes/devUtils/nvmWindows.html#检查环境变量" class="sidebar-link">检查环境变量</a></li><li class="sidebar-sub-header"><a href="/UINotes/devUtils/nvmWindows.html#nvm下载使用node" class="sidebar-link">nvm下载使用node</a></li><li class="sidebar-sub-header"><a href="/UINotes/devUtils/nvmWindows.html#很重要的温馨提示" class="sidebar-link">很重要的温馨提示</a></li><li class="sidebar-sub-header"><a href="/UINotes/devUtils/nvmWindows.html#有帮助的tips" class="sidebar-link">有帮助的tips</a></li></ul></li></ul></div><div class="page"><div class="content"><h1 id="nvm-windows"><a href="#nvm-windows" aria-hidden="true" class="header-anchor">#</a> nvm-Windows</h1><p>nvm-windows，用于Windows下的node版本管理。</p><h2 id="卸载原先安装的nodejs"><a href="#卸载原先安装的nodejs" aria-hidden="true" class="header-anchor">#</a> 卸载原先安装的nodejs</h2><ol><li><p>控制面板-程序卸载-node-右键卸载</p></li><li><p>从下列的目录中找到相关的内容并删除掉：</p><p>C:\Program Files (x86)\nodejs</p><p>C:\Program Files\nodejs</p><p>C:\Users{User}\AppData\Roaming\npm（或%appdata%\npm）</p><p>C:\Users{User}\AppData\Roaming\npm-cache（或%appdata%\npm-cache）</p></li><li><p>检查%PATH%环境变量以确保没有引用Nodejs或npm存在。</p></li><li><p>重新启动电脑。</p></li></ol><h2 id="下载安装"><a href="#下载安装" aria-hidden="true" class="header-anchor">#</a> 下载安装</h2><p>官网地址<a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank" rel="noopener noreferrer">https://github.com/coreybutler/nvm-windows/releases</a> 下载nvm-set.zip压缩包，本次下载为1.1.7版本。</p><p><img src="/UINotes/assets/img/01.f078a50f.png" alt="1.1.7"></p><p>双击nvm-setup.exe 进行安装：</p><p><img src="/UINotes/assets/img/1.9f73b325.png" alt="1.1.7">
+注意：nvm的安装目录</p><p><img src="/UINotes/assets/img/2.810268c0.png" alt="1.1.7"></p><p>注意：nodejs的安装目录</p><p><img src="/UINotes/assets/img/3.6c3b9c8c.png" alt="1.1.7"></p><p>点击install 下载依赖</p><p><img src="/UINotes/assets/img/4.38e30e43.png" alt="1.1.7"></p><h2 id="检查环境变量"><a href="#检查环境变量" aria-hidden="true" class="header-anchor">#</a> 检查环境变量</h2><p>1.1.7版本安装完成后会自动设置环境变量，但是建议检查一下</p><p><img src="/UINotes/assets/img/5.9833e5e6.png" alt="1.1.7"></p><pre><code>NVM_HOME   C:\Users\DELL\AppData\Roaming\nvm
+NVM_SYMLINK   C:\Program Files\nodejs
+%NVM_HOME%
+%NVM_SYMLINK%
+</code></pre><h2 id="nvm下载使用node"><a href="#nvm下载使用node" aria-hidden="true" class="header-anchor">#</a> nvm下载使用node</h2><p>常用命令</p><pre><code>nvm -v                      // 查看版本
+nvm install 6.15.1 64-bit  // 下载某个版本的node
+nvm install 10.7.0
+nvm ls                     // 查看所有已下载版本
+nvm use 10.7.0             // 使用某个版本的node
+nvm ls
+nvm uninstall 10.7.0       // 删除
+</code></pre><p><img src="/UINotes/assets/img/6.fbd006cd.png" alt="1.1.7"></p><p><img src="/UINotes/assets/img/10.487067e6.png" alt="1.1.7">
+正在使用的版本会标星号</p><h2 id="很重要的温馨提示"><a href="#很重要的温馨提示" aria-hidden="true" class="header-anchor">#</a> 很重要的温馨提示</h2><p>当执行 nvm install xxx  下载完成某一个版本node之后，在nvm的安装目录即可找到以版本号命名的文件夹，
+<span style="color:red">打开文件夹，必须包含npm 的相关文件和node_modules，且node_modules里面包含npm依赖包，否则下载的该版本不可用！</span>
+亲测不是所有版本都会顺利下载npm包,
+低版本和高版本包含的npm文件会略有不同。
+如下：</p><p><img src="/UINotes/assets/img/8.de04337d.png" alt="1.1.7"></p><p><img src="/UINotes/assets/img/9.7da2bbee.png" alt="1.1.7"></p><h2 id="有帮助的tips"><a href="#有帮助的tips" aria-hidden="true" class="header-anchor">#</a> 有帮助的tips</h2><div class="tip custom-block"><p class="custom-block-title">nodejs</p><p>安装完成后C:\Users\DELL\AppData\Roaming\nvm 可以找到，但是C:\Program Files\nodejs 没找到，
+当下载过一个node版本后会出现在安装时选择的目录里，当使用nvm use xxx命令切换node版本时nodejs文件内的node和npm的版本也会发生相应变化。</p><p>没有使用nvm之前安装的nodejs默认也会安装在该目录下，也许这是一开始需要删除原来安装过node的原因。</p></div><p><img src="/UINotes/assets/img/11.67d8e1aa.png" alt="1.1.7"></p><div class="tip custom-block"><p class="custom-block-title">可下载成功的版本</p><pre><code>6.15.1
+7.0.0
+8.0.0
+10.0.0
+10.7.0
+</code></pre><p>注意：列出来的也不保证也可下载成功，反之也成立。</p></div><div class="tip custom-block"><p class="custom-block-title">使用别人下载成功的压缩包</p><p>别人下载成功的相应版本的压缩包，直接压缩文件夹，解压到自己的安装目录即可。</p><p>注意解压时的文件目录，例如解压到nvm/v6.15.1 而不是 nvm/v6.15.1 /v6.15.1</p></div><p><img src="/UINotes/assets/img/12.aa76d3fe.jpg" alt="1.1.7"></p></div><!----><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/UINotes/devUtils/git.html" class="prev">
+          Git
+        </a></span><!----></p></div></div></div></div>
+    <script src="/UINotes/assets/js/app.0d7242df.js" defer></script><script src="/UINotes/assets/js/1.12a0c242.js" defer></script>
+  </body>
+</html>
