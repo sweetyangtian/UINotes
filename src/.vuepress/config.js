@@ -10,6 +10,7 @@ module.exports = {
       nav: [
         { text: '开发规范', link: '/develop/' },
         { text: '工具', link: '/devUtils/' },
+        { text: 'chart', link: '/chart/' },
       ],
       // 侧边栏
       sidebar:{
@@ -30,6 +31,9 @@ module.exports = {
           ['html2canvas', 'html2canvas'],
           ['git','Git'],
           ['nvmWindows','nvm-Windows']
+        ],
+        '/chart/':[
+          ['','图表']
         ]
       }
   
