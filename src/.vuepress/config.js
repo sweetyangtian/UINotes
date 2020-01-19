@@ -23,7 +23,9 @@ module.exports = {
         '/develop/':[
           ['', 'GIT'],
           ['js','JS'],
-          ['css','CSS']
+          ['css','CSS'],
+          ['commit','代码检查方案'],
+          ['eslient','ESLint']
         ],
         '/devUtils/':[
           ['', '在线工具'],
