@@ -1,10 +1,8 @@
 # ESLint 
 
-ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工具，它的目标是保证代码的一致性和避免错误。
+ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工具，它的目标是保证代码的一致性和避免错误。官方网站：[eslint.org/](https://eslint.org/)   ，中文网站：[eslint.cn/](https://eslint.cn/)
 
-【官方网站】：[eslint.org/](https://eslint.org/)  【中文网站】：[eslint.cn/](https://eslint.cn/)
-
->先决条件：Node.js (>=6.14), npm version 3+。
+<b>先决条件：Node.js (>=6.14), npm version 3+。</b>
 ```
 npm install eslint --save-dev
 
