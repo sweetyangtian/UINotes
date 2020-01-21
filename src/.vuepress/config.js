@@ -1,9 +1,9 @@
 module.exports = {
     title: '笔记文档',  // 设置网站标题
     description: '随便写写的随手笔记',
-    base:'/UINotes/',
+    base:'/MyNotes/',
     repo:
-   'https://github.com/sweetyangtian/UINotes', // 添加 github 链接
+   'https://github.com/sweetyangtian/MyNotes', // 添加 github 链接
    dest:'./docs',
     themeConfig: {
       displayAllHeaders: true,

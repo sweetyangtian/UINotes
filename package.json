@@ -1,8 +1,8 @@
 {
-  "name": "UINotes",
+  "name": "MyNotes",
   "version": "1.0.0",
-  "author": "",
-  "description": "",
+  "author": "sweety",
+  "description": "My Notes",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev src",
