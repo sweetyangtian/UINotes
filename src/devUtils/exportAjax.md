@@ -69,3 +69,46 @@ const isJsonData = res => res.type.includes('json')
 
 export default exportAjax;
 ```
+
+## 获取url中的参数
+```js
+
+export const getParams = (url = location.href) => {
+    let reg = /(\w+)=([^&]+)/g,
+        params = {},
+        result = [],
+        index = url.indexOf('?');
+
+    url = decodeURIComponent(url.slice(index + 1, url.length) || '');
+    while ((result = reg.exec(url))) {
+        params[result[1]] = result[2];
+    }
+    return params;
+};
+
+```
+
+## 复制文字
+```js
+//复制文字(当前地址链接)
+export const copyTextOrUrl = (data, timer = 500) => {
+    const copyFun = ({ text, tips }) => {
+        const _text = text || window.location.href;
+        const input = document.createElement('input');
+        input.setAttribute('readonly', 'readonly');
+        input.setAttribute('value', _text);
+        document.body.appendChild(input);
+        input.setSelectionRange(0, 9999);
+        input.select();
+        if (document.execCommand('copy')) {
+            document.execCommand('copy');
+            message.success(tips || 'Copy success!');
+        }
+        document.body.removeChild(input);
+    };
+    setTimeout(() => {
+        copyFun(data);
+    }, timer);
+};
+
+```

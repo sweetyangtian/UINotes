@@ -8,22 +8,16 @@ module.exports = {
     themeConfig: {
       displayAllHeaders: true,
       nav: [
+        { text: '学习', link: '/develop/' },
         { text: '开发规范', link: '/develop/' },
-        { text: '工具', link: '/devUtils/' },
-        { text: 'chart', link: '/chart/' },
+        { text: '开发工具', link: '/devUtils/' },
       ],
       // 侧边栏
       sidebar:{
-        '/commonCom/':[
-          ['','FormField'],
-          ['ExportList','ExportList'],
-          ['Filter','Filter'],
-          ['Ellipsis','Ellipsis']
-        ],
         '/develop/':[
-          ['', 'GIT'],
-          ['js','JS'],
           ['css','CSS'],
+          ['js','JS'],
+          ['', 'GIT'],
           ['commit','代码检查方案'],
           ['eslient','ESLint']
         ],
@@ -32,10 +26,7 @@ module.exports = {
           ['exportAjax', '工具类'], 
           ['html2canvas', 'html2canvas'],
           ['git','Git'],
-          ['nvmWindows','nvm-Windows']
-        ],
-        '/chart/':[
-          ['','图表']
+          ['nvmWindows','nvmWindows']
         ]
       }
   
