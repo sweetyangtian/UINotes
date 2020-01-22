@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Blogs | SASS语法</title>
+    <meta name="description" content="Welcome to my blogs">
+    
+    
+    <link rel="preload" href="/MyBlogs/assets/css/styles.1fcee1f5.css" as="style"><link rel="preload" href="/MyBlogs/assets/js/app.1fcee1f5.js" as="script"><link rel="preload" href="/MyBlogs/assets/js/15.c5746af9.js" as="script"><link rel="prefetch" href="/MyBlogs/assets/js/1.997e177e.js"><link rel="prefetch" href="/MyBlogs/assets/js/10.cafb631a.js"><link rel="prefetch" href="/MyBlogs/assets/js/11.b95bf1b9.js"><link rel="prefetch" href="/MyBlogs/assets/js/12.339fa388.js"><link rel="prefetch" href="/MyBlogs/assets/js/13.fad5752c.js"><link rel="prefetch" href="/MyBlogs/assets/js/14.613c85c9.js"><link rel="prefetch" href="/MyBlogs/assets/js/16.230018ad.js"><link rel="prefetch" href="/MyBlogs/assets/js/17.625ca2d5.js"><link rel="prefetch" href="/MyBlogs/assets/js/18.ec0d39f9.js"><link rel="prefetch" href="/MyBlogs/assets/js/19.69904086.js"><link rel="prefetch" href="/MyBlogs/assets/js/2.d8ad626e.js"><link rel="prefetch" href="/MyBlogs/assets/js/20.6e3d39e1.js"><link rel="prefetch" href="/MyBlogs/assets/js/21.f59c68d5.js"><link rel="prefetch" href="/MyBlogs/assets/js/22.8caaa8f9.js"><link rel="prefetch" href="/MyBlogs/assets/js/23.1a1e7601.js"><link rel="prefetch" href="/MyBlogs/assets/js/24.f7516e7c.js"><link rel="prefetch" href="/MyBlogs/assets/js/25.eedadaf0.js"><link rel="prefetch" href="/MyBlogs/assets/js/26.1b5d4ac2.js"><link rel="prefetch" href="/MyBlogs/assets/js/3.02761d99.js"><link rel="prefetch" href="/MyBlogs/assets/js/4.9a9984bd.js"><link rel="prefetch" href="/MyBlogs/assets/js/5.c7bf5c7a.js"><link rel="prefetch" href="/MyBlogs/assets/js/6.f9b17b5a.js"><link rel="prefetch" href="/MyBlogs/assets/js/7.4ab3f390.js"><link rel="prefetch" href="/MyBlogs/assets/js/8.f81d2a56.js"><link rel="prefetch" href="/MyBlogs/assets/js/9.3e133433.js">
+    <link rel="stylesheet" href="/MyBlogs/assets/css/styles.1fcee1f5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/MyBlogs/" class="home-link router-link-active"><!----><span class="site-name">
+      Blogs
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/MyBlogs/learning/" class="nav-link">学习</a></div><div class="nav-item"><a href="/MyBlogs/develop/" class="nav-link">开发规范</a></div><div class="nav-item"><a href="/MyBlogs/tools/" class="nav-link">开发工具</a></div><div class="nav-item"><a href="/MyBlogs/utils/" class="nav-link">工具函数</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/MyBlogs/learning/" class="nav-link">学习</a></div><div class="nav-item"><a href="/MyBlogs/develop/" class="nav-link">开发规范</a></div><div class="nav-item"><a href="/MyBlogs/tools/" class="nav-link">开发工具</a></div><div class="nav-item"><a href="/MyBlogs/utils/" class="nav-link">工具函数</a></div><!----></nav><!----></div><div class="page"><div class="content"><h2 id="sass语法"><a href="#sass语法" aria-hidden="true" class="header-anchor">#</a> SASS语法</h2><h4 id="_1-变量"><a href="#_1-变量" aria-hidden="true" class="header-anchor">#</a> 1 变量</h4><pre class="language-js"><code>$primaryColor <span class="token punctuation">:</span>red<span class="token punctuation">;</span>
+$side<span class="token punctuation">:</span>left<span class="token punctuation">;</span>
+border<span class="token operator">-</span>#<span class="token punctuation">{</span>$side<span class="token punctuation">}</span><span class="token punctuation">:</span> <span class="token number">5</span>px solid $primaryColor<span class="token punctuation">;</span> <span class="token comment">// 镶嵌在字符串  写在#{}</span>
+</code></pre><h4 id="_2-计算功能"><a href="#_2-计算功能" aria-hidden="true" class="header-anchor">#</a> 2 计算功能</h4><pre class="language-js"><code>$<span class="token keyword">var</span><span class="token punctuation">:</span><span class="token number">100</span>px<span class="token punctuation">;</span>
+right<span class="token punctuation">:</span> $<span class="token keyword">var</span> <span class="token operator">*</span> <span class="token number">10</span><span class="token operator">%</span><span class="token punctuation">;</span>
+</code></pre><h4 id="_3-继承"><a href="#_3-继承" aria-hidden="true" class="header-anchor">#</a> 3 继承</h4><pre class="language-js"><code><span class="token punctuation">.</span>class2 <span class="token punctuation">{</span> @extend <span class="token punctuation">.</span>class1<span class="token punctuation">;</span><span class="token punctuation">}</span>
+
+</code></pre><h4 id="_4-mixin定义代码块"><a href="#_4-mixin定义代码块" aria-hidden="true" class="header-anchor">#</a> 4 @mixin定义代码块</h4><pre class="language-js"><code>@mixin left <span class="token punctuation">{</span>
+　　　　float<span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+　　　　margin<span class="token operator">-</span>left<span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+　　	<span class="token punctuation">}</span>
+  <span class="token comment">//带变量</span>
+ @mixin <span class="token function">left</span><span class="token punctuation">(</span><span class="token parameter">$value<span class="token punctuation">:</span> <span class="token number">10</span>px</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+　　　　float<span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+　　　　margin<span class="token operator">-</span>right<span class="token punctuation">:</span> $value<span class="token punctuation">;</span>
+　<span class="token punctuation">}</span>
+  <span class="token comment">//调用</span>
+div <span class="token punctuation">{</span>
+　　　　@include left<span class="token punctuation">;</span>
+　　<span class="token punctuation">}</span>
+</code></pre><h4 id="_5-自定义函数"><a href="#_5-自定义函数" aria-hidden="true" class="header-anchor">#</a> 5 自定义函数</h4><pre class="language-js"><code>@<span class="token keyword">function</span> <span class="token function">double</span><span class="token punctuation">(</span><span class="token parameter">$n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+　　　　@<span class="token keyword">return</span> $n <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+　　<span class="token punctuation">}</span>
+　　#sidebar <span class="token punctuation">{</span>
+　　　　width<span class="token punctuation">:</span> <span class="token function">double</span><span class="token punctuation">(</span><span class="token number">5</span>px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+　　<span class="token punctuation">}</span>
+</code></pre><h4 id="_6-引用其他文件"><a href="#_6-引用其他文件" aria-hidden="true" class="header-anchor">#</a> 6 引用其他文件</h4><pre class="language-js"><code>
+@<span class="token keyword">import</span> <span class="token string">&quot;path/filename.scss&quot;</span><span class="token punctuation">;</span>
+
+    <span class="token function">lighten</span><span class="token punctuation">(</span>#cc3<span class="token punctuation">,</span> <span class="token number">10</span><span class="token operator">%</span><span class="token punctuation">)</span> <span class="token comment">// #d6d65c</span>
+<span class="token function">　　darken</span><span class="token punctuation">(</span>#cc3<span class="token punctuation">,</span> <span class="token number">10</span><span class="token operator">%</span><span class="token punctuation">)</span> <span class="token comment">// #a3a329</span>
+<span class="token function">　　grayscale</span><span class="token punctuation">(</span>#cc3<span class="token punctuation">)</span> <span class="token comment">// #808080</span>
+<span class="token function">　　complement</span><span class="token punctuation">(</span>#cc3<span class="token punctuation">)</span> <span class="token comment">// #33c</span>
+
+
+</code></pre><h4 id="_7-条件语句"><a href="#_7-条件语句" aria-hidden="true" class="header-anchor">#</a> 7 条件语句</h4><pre class="language-js"><code>
+p <span class="token punctuation">{</span>
+　　　　@<span class="token keyword">if</span> <span class="token number">1</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">==</span> <span class="token number">2</span> <span class="token punctuation">{</span> border<span class="token punctuation">:</span> <span class="token number">1</span>px solid<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+　　　　@<span class="token keyword">if</span> <span class="token number">5</span> <span class="token operator">&lt;</span> <span class="token number">3</span> <span class="token punctuation">{</span> border<span class="token punctuation">:</span> <span class="token number">2</span>px dotted<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+　　<span class="token punctuation">}</span>
+</code></pre><h4 id="_8-循环语句"><a href="#_8-循环语句" aria-hidden="true" class="header-anchor">#</a> 8 循环语句</h4><pre class="language-js"><code>
+  <span class="token comment">//8.1</span>
+@<span class="token keyword">for</span> $i <span class="token keyword">from</span> <span class="token number">1</span> to <span class="token number">10</span> <span class="token punctuation">{</span>
+　　　　<span class="token punctuation">.</span>border<span class="token operator">-</span>#<span class="token punctuation">{</span>$i<span class="token punctuation">}</span> <span class="token punctuation">{</span>
+　　　　　　border<span class="token punctuation">:</span> #<span class="token punctuation">{</span>$i<span class="token punctuation">}</span>px solid blue<span class="token punctuation">;</span>
+　　　　<span class="token punctuation">}</span>
+　　<span class="token punctuation">}</span>
+  <span class="token comment">//8.2</span>
+  $i<span class="token punctuation">:</span> <span class="token number">6</span><span class="token punctuation">;</span>
+　　@<span class="token keyword">while</span> $i <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+　　　　<span class="token punctuation">.</span>item<span class="token operator">-</span>#<span class="token punctuation">{</span>$i<span class="token punctuation">}</span> <span class="token punctuation">{</span> width<span class="token punctuation">:</span> <span class="token number">2</span>em <span class="token operator">*</span> $i<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+　　　　$i<span class="token punctuation">:</span> $i <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">;</span>
+　　<span class="token punctuation">}</span>
+  <span class="token comment">//8.3</span>
+  @each $member <span class="token keyword">in</span> a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> d <span class="token punctuation">{</span>
+　　　　<span class="token punctuation">.</span>#<span class="token punctuation">{</span>$member<span class="token punctuation">}</span> <span class="token punctuation">{</span>
+　　　　　　background<span class="token operator">-</span>image<span class="token punctuation">:</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">&quot;/image/#{$member}.jpg&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+　　　　<span class="token punctuation">}</span>
+　　<span class="token punctuation">}</span>
+</code></pre></div><!----><!----></div></div></div>
+    <script src="/MyBlogs/assets/js/app.1fcee1f5.js" defer></script><script src="/MyBlogs/assets/js/15.c5746af9.js" defer></script>
+  </body>
+</html>
