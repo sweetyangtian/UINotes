@@ -46,13 +46,3 @@
   * debugger: 联调过程中解决的问题
   * docs: 文档修改（文案修改 && 文件更新）
   * build: npm run build 打包
-
-### Huskey
-
-Commit校验工具，在 git commit 提交代码前，利用 Git钩子——pre-commit 来实现代码规范检测。一旦发现检测结果带有 error，则不允许提交到远程仓库。
-
-安装 : yarn add husky -D
-
-package.json配置
-
-![Huskey](./husky.png)

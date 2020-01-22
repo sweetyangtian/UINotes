@@ -1,11 +1,12 @@
-## Git
+## 菜鸟入门
 
 [廖雪峰的网站-详细Git教程](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 github客户端-方便代码提交和操作
 
-![github](./github.png)
-### 命令总结
+![github](./imgs/github.png)
+
+## 命令总结
 
 >新建仓库
 
@@ -67,8 +68,7 @@ $ git commit -m "conflict fixed"
 修复一个代号101的bug
 ```js
 $ git stash                     // 把当前工作现场“储藏”起来
-```
-```js
+
 $ git checkout master           // 切换到bug修复分支
 $ git checkout -b issue-101     // 创建bug分支
 
@@ -85,7 +85,34 @@ stash@{0}: WIP on dev: f52c633 add merge
 
 $ git stash apply stash@{0}     // 恢复
 $ git stash drop  stash@{0}     // 删除存储
-```
-```js
+
 $ git stash pop                 // 恢复+删除
 ```
+
+## 修改密码
+
+修改git 已配置的用户密码
+
+控制面板---用户账户---凭据管理--修改相应的密码
+
+![git](./imgs/git.png)
+
+运行一下命令缓存输入的用户名和密码：
+
+    git config --global credential.helper wincred
+
+清除掉缓存在git中的用户名和密码
+
+    git credential-manager uninstall
+
+恢复保存密码
+
+    git config --global credential.helper store
+
+## windows下SSL证书问题
+
+错误：
+    SSL certificate problem: self signed certificate
+
+解决： 
+    git config --global http.sslVerify false

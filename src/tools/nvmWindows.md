@@ -18,7 +18,7 @@ nvm-windows，用于Windows下的node版本管理。
 4. 重新启动电脑。
 
 ## step2：下载安装
- 官网地址[https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases) 下载nvm-set.zip压缩包，本次下载为1.1.7版本。
+ 官网地址 [https://github.com/coreybutler/nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases) 下载nvm-set.zip压缩包，本次下载为1.1.7版本。
 
 ![1.1.7](./imgs/nvm/01.png)
 
@@ -38,7 +38,7 @@ nvm-windows，用于Windows下的node版本管理。
 ![1.1.7](./imgs/nvm/4.png)
 
 ## step3：检查环境变量
-1.1.7版本安装完成后会自动设置环境变量，但是建议检查一下
+1.1.7 版本安装完成后会自动设置环境变量，但是建议检查一下
 
 ![1.1.7](./imgs/nvm/5.png)
 
@@ -48,7 +48,7 @@ nvm-windows，用于Windows下的node版本管理。
     %NVM_SYMLINK%
 
 
-## step4：nvm下载使用node
+## step4：nvm下载并使用node
 设置镜像
 
     nvm node_mirror https://npm.taobao.org/mirrors/node/
@@ -67,22 +67,30 @@ nvm-windows，用于Windows下的node版本管理。
 ![1.1.7](./imgs/nvm/6.png)
 
 ![1.1.7](./imgs/nvm/10.png)
-正在使用的版本会标星号
+<b>ps: 正在使用的版本会标星号</b>
+
+### 为什么要删除 C:\Program Files\nodejs ？？？
+
+没有使用 nvm 之前安装的 nodejs 默认会安装在 C:\Program Files\nodejs，使用 nvm 下载 node 版本时也会在C:\Program Files\ 生成一个动态变化的 nodejs 文件夹（如下图所示带箭头），使用 nvm use xxx 命令切换 node 版本时 nodejs 文件内的 node 包和 npm 包的版本也会发生相应变化。  
+所以开始安装nvm之前需要删除原来安装过的node。
+
+
+![1.1.7](./imgs/nvm/11.png)
 
 ## 踩坑预警
 当执行 nvm install xxx  下载完成某一个版本node之后，在nvm的安装目录即可找到以版本号命名的文件夹，
 <span style="color:red">打开文件夹，必须包含npm 的相关文件和node_modules，且node_modules里面包含npm依赖包，否则下载的该版本不可用！</span>
 亲测不是所有版本都会顺利下载npm包,
-低版本和高版本包含的npm文件会略有不同。
+低版本和高版本包含的npm文件会有不同。
 如下：
 
 ![1.1.7](./imgs/nvm/8.png)
 
 ![1.1.7](./imgs/nvm/9.png)
 
-### 坑： node下载成功,npm包下载不成功
+### Node 下载成功，npm 包下载不成功 ？？？
 
-方法1： 根目录下 settings.txt添加镜像
+<b>方法1： 根目录下 settings.txt 添加镜像</b>
 
     root: D:\nvm
     path: D:\nvm\nodejs
@@ -90,39 +98,29 @@ nvm-windows，用于Windows下的node版本管理。
     npm_mirror: https://npm.taobao.org/mirrors/npm/
 
 
-方法2：使用别人下载成功的压缩包
+<b>方法2：使用别人下载成功的压缩包</b>
 
-别人下载成功的相应版本的压缩包，直接压缩文件夹，解压到自己的安装目录即可。
-
-注意解压时的文件目录，例如解压到nvm/v6.15.1 而不是 nvm/v6.15.1 /v6.15.1 
+别人下载成功的相应版本的压缩包，直接压缩文件夹，解压到自己的安装目录即可。  
+注意解压时的文件目录，例如解压到 nvm/v6.15.1 而不是 nvm/v6.15.1/v6.15.1 
 
 ![1.1.7](./imgs/nvm/12.jpg)
 
 
-方法3：神操作
+<b>方法3：神操作</b>
 
-cmd执行 nvm install 10.8.0后nvm 根目录文件夹下会出现一个temp文件夹
-
-迅雷不及掩耳之势赶紧复制压缩包, (注意)cmd进程下载完成后，解压到v10.8.0/node-modules下，改名npm，删包，搞定！
+cmd 执行 nvm install 10.8.0 后 nvm 根目录文件夹下会暂时出现一个 temp 文件夹，
+迅雷不及掩耳之势赶紧复制压缩包，(注意) cmd 进程下载完成后，粘贴到 v10.8.0/node-modules 下，解压，改名 npm，删包，搞定！
 
 ![1.1.7](./imgs/nvm/13.png)
 
 ![1.1.7](./imgs/nvm/14.png)
 
-如果v10.8.0文件夹下没有npm文件和npm进程文件，需要将v10.8.0\node_modules\npm\bin
+如果 v10.8.0/ 根文件夹下没有 npm 文件和 npm 进程文件，将 v10.8.0\node_modules\npm\bin 中的 npm 文件复制一份出来即可。
 
 ![1.1.7](./imgs/nvm/15.png)
 
-## 其他 
 
-::: tip nodejs
-安装完成后C:\Users\DELL\AppData\Roaming\nvm 可以找到，但是C:\Program Files\nodejs 没找到，
-当下载过一个node版本后会出现在安装时选择的目录里，当使用nvm use xxx命令切换node版本时nodejs文件内的node和npm的版本也会发生相应变化。
 
-没有使用nvm之前安装的nodejs默认也会安装在该目录下，所以开始安装需要删除原来安装过的node。
-::: 
-
-![1.1.7](./imgs/nvm/11.png)
 
 
 

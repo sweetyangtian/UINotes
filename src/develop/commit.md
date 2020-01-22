@@ -1,151 +1,5 @@
 
-良好的代码规范有助于项目的维护，为了防止一些不规范的代码 commit并push到远端,我们可以在git命令执行前用一些钩子来检测并阻止。现在主要有两种git钩子插件：husky（jquery与next.js都在用），pre-commit(antd在用)。
-
-## 代码规范检测工具
-
-### ESLint
-
-Eslint 提供了 ECMAScript/JavaScript 规范的代码校验，我们可以根据团队的代码风格进行配置，也可以使用开源的配置方案，例如 [eslint-config-airbnb](https://www.npmjs.com/package/eslint-config-airbnb) 来配置。
-
-eslint-config-airbnb 默认包含eslint，eslint-plugin-import，eslint-plugin-react，eslint-plugin-react-hooks，和eslint-plugin-jsx-a11y。
-
-#### 配置
-- <b>插件</b>  
-
-[eslint-plugin-html](https://www.npmjs.com/package/eslint-plugin-html)：校验 html  
-[eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) ：校验 React   
-[eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import)：校验 import/export 语法，防止文件路径错误及导出名称的问题  
-[eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)：提供 jsx 元素可访问性校验  
-[eslint-plugin-flowtype](https://www.npmjs.com/package/eslint-plugin-flowtype)：js 静态类型检查工具。  
-[eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)：根据 Hooks API 校验 Hooks 的使用  
-
-- <b>语言选项</b>  
-
-对于 ES6 语法，使用 { "parserOptions": { "ecmaVersion": 6 } }；  
-对于新的 ES6 全局变量，使用 { "env":{ "es6": true } }
-
-- <b>解析器</b>  
-
-[Babel-ESLint](https://www.npmjs.com/package/babel-eslint) - 一个对Babel解析器的包装，使其能够与 ESLint 兼容。   
-
-
-文件示例：
-```js
-// .eslintrc.js 
-{
-    extends: ["airbnb", "eslint:recommended"], // 使用开源的配置方案 airbnb
-    parser: "babel-eslint",
-    parserOptions: {
-        ecmaVersion: 6,
-        sourceType: "module",
-        ecmaFeatures: {
-            "jsx": true
-        }
-    },
-    plugins: ['react-hooks'],
-    rules: {
-        "semi": "error"
-    }
-}
-```
-
-```json
-//  package.json
-{
-    "scripts":{
-        "eslint": "eslint --fix --ext .js,.jsx src"
-    }
-}
-```
-### Stylelint
-
-比较流行且开源的CSS lint方案：csslint、SCSS-Lint、Stylelint。
-
-Stylelint优势：
-- 其支持 Less、Sass 这类预处理器。
-- 团队使用less在社区活跃度上，有非常多的第三方插件。
-- 在Facebook，Github，WordPress 等公司得到实践，能够覆盖很多场景。
-
-```json
-//  package.json
-{
-    "scripts":{
-        "stylelint": "stylelint \"./src/**/*.{css,less}\" --fix"
-    }
-}
-```
-
-
-## 代码风格统一工具
-
-### Prettier
-
-Prettier是一个能够完全统一你和同事代码风格的利器，能保证代码的可读性。支持js,jsx,css风格统一。
-
-安装：
-```
-npm i -D prettier
-```
-配合ESLint检测代码风格，安装插件：
-
-```
-npm i -D eslint-plugin-prettier
-```
-eslint-plugin-prettier 插件会调用prettier对代码进行风格检查，原理是先使用prettier对你的代码进行格式化，然后与格式化之前的代码进行对比，如果过出现了不一致，这个地方就会被prettier进行标记。
-接下来，我们需要在rules中添加，"prettier/prettier": "error"，表示被prettier标记的地方抛出错误信息。
-
-```js
-//.eslintrc.js
-{
-  "plugins": ["prettier"],
-  "rules": {
-    "prettier/prettier": "error"
-  }
-}
-```
-
-```json
-// package.json
-{
-    "scripts":{
-        "format": "prettier --write \"./src/**/*.{js,jsx,json}\""
-    }
-}
-```
-
-
-## 代码提交前检测工具
-
-### husky
-
-husky能够防止不规范代码被commit、push、merge等等。
-
-下载：
-```
-npm install husky --save-dev
-```
-或
-```
-yarn add husky --dev
-```
-
-```json
-// package.json
-    {
-        "husky": {
-            "hooks": {
-                "pre-commit": "npm test",
-                "pre-push": "npm test",
-                "...": "..."
-            }
-        }
-    }
-```
-
-
-## 终版配置文件
-
-### .eslintrc.js
+## .eslintrc.js
 
 ```js
 module.exports = {
@@ -176,7 +30,7 @@ module.exports = {
 
 ```
 
-### .stylelintrc
+## .stylelintrc
 
 ```js
 {
@@ -241,7 +95,7 @@ module.exports = {
 
 ```
 
-### .prettierrc.js
+## .prettierrc.js
 
 ```js
 module.exports = {
@@ -280,7 +134,7 @@ module.exports = {
 
 ```
 
-### package.json
+## package.json
 
 ```json
 {

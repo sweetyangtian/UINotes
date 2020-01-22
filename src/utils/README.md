@@ -1,10 +1,3 @@
-# 常用校验
-
-MP ColorUI , 基于 Taro 小程序框架打造的适配 H5 以及小程序的多端 UI 组件库.
-
-[官方文档](https://yinliangdream.github.io/mp-colorui-doc/#/)
-
-
 ## 手机号码
 
 ```js
@@ -16,7 +9,7 @@ MP ColorUI , 基于 Taro 小程序框架打造的适配 H5 以及小程序的多
 export const phone = (value) => /^[1]([3-9])[0-9]{9}$/.test(value);
 
 ```
-## email 地址校验
+## email 地址
 ```js
 /**
  * email 地址校验
