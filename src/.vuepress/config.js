@@ -8,7 +8,7 @@ module.exports = {
     themeConfig: {
       displayAllHeaders: true,
       nav: [
-        { text: '学习', link: '/learning/' },
+        { text: '微信小程序', link: '/wechat/' },
         { text: '开发规范', link: '/develop/' },
         { text: '开发工具', link: '/tools/' },
         { text: '工具函数', link: '/utils/' },
@@ -31,6 +31,11 @@ module.exports = {
           ['', '常用校验'],
           ['exportAjax', '工具类'], 
           ['html2canvas', 'html2canvas'],
+        ],
+        '/wechat/':[
+          ['', '开发须知'],
+          ['taro', 'Taro']
+         
         ]
       }
   
