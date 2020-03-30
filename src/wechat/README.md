@@ -5,22 +5,18 @@
 
 [围观踩坑 go >>](/wechat/taro.html#插槽slot)
 
-## 自定义tabbar
+## 自定义底部导航栏
 自定义tabbar时，page不会像原来那样高度只到tabbar之上，page区域会拉升到屏幕最底部，tabbar会覆盖一部分的内容。
 
 [围观踩坑 go >>](/wechat/taro.html#自定义tabbar)
 
-## 自定义顶部导航栏navbar
+## 自定义顶部导航栏
 * 没有官方方案，只能自己使用cover-view来自定义
-* 胶囊按钮不同手机的位置就是不一样和单位转换无关（通过 wx.getMenuButtonBoundingClientRect()可获取坐标位置，坐标信息以屏幕左上角为原点），如果老板要居中......
-* 自定义navbar和tabbar一样会使page拉伸到顶部，难点不是给page加个上边距，而是你需要下拉刷新的时候是从page的顶部开始的，你的下拉完全被自定义navbar挡住了。别跟我说设置margin，下拉刷新就是用的margin，冲突的。
-* 最后还是原生组件层级导致的，你的navbar必须是最后渲染才行，要不然会被其他覆盖，你上滑时就知道了。我想过其他的方案，比如干脆navbar加个slot，把页面内容都放到slot，然后你就知道第二个坑哪里来的了。没办法还是修改布局得了。
+* 胶囊按钮不同手机的位置不一样和单位转换无关，通过 wx.getMenuButtonBoundingClientRect() 可获取坐标位置，坐标信息以屏幕左上角为原点
+* 自定义navbar 和 tabbar一样会使page拉伸到顶部，页面内部会被navbar 遮挡，你可能会想到给页面顶部添加padding-top，但是当你需要下拉刷新的时候，由于下拉刷新是从page的顶部开始的，你的下拉还是会挡住，而设置margin 也不可取，下拉刷新就是用的margin，冲突的。
 
-可参考文章：   
-[快狗打车 - 自定义导航栏](https://juejin.im/post/5ca563f8f265da307a16133b)   
-[小灰 - 小程序自定义导航栏适配](https://segmentfault.com/a/1190000018733860)   
-[小白 - 小程序自定义单页面、全局导航栏](https://blog.fundebug.com/2019/06/22/customize-wechat-miniprogram-navigation/
-)
+[围观踩坑 go >>](/wechat/taro.html#自定义顶部导航)
+
 ## 限制
 
 * DOM节点不超过16000个
@@ -108,3 +104,56 @@ page {
   display: inline-block;
 }
 ```
+
+## 粘性布局 position:sticky
+
+先看MDN文档：
+
+![sticky1](./img/sticky1.png)
+![sticky2](./img/sticky2.png)
+
+看完一脸懵逼的，你不是一个人，多看几遍就好了......
+
+还是上代码吧：
+
+<StickyOne/>
+
+
+总结：   
+* 父元素不能 overflow:hidden、scroll、auto、overlay 属性。
+* 父元素的高度不能低于sticky元素的高度
+* 父级元素不要设置固定高度（* 效果见上图）
+* 必须指定top、bottom、left、right4个值之一，否则只会处于相对定位 （不得不说的废话）
+
+小程序开发时你需要注意：
+
+1. 小程序的page 默认设置了 overflow-x:hidden
+```jsx
+// error
+<page>
+  <View className="search-btns"></View>
+</page>
+
+// true：
+<page>
+  <View><View className="search-btns"></View></View>
+</page>
+
+```
+
+2. 移动端开发有时会为了空元素占位，写height:100vh，需换成min-height:100vh
+
+例如一个职位列表页：
+
+```jsx
+
+  <View className="demo">
+    <View className="banner"></View>
+    <View className="search-btns">搜索定位</View>
+    <View className="list">职位列表</View>
+    <View className="no-data">暂无数据</View>
+  </View>
+
+```
+
+当给demo设置height:100vh时，滚动距离大于100vh，sticky元素也会跟着滚走，效果见上图
