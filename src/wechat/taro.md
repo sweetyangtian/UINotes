@@ -51,112 +51,7 @@ taro update self
 报错：匹配不到 xxxx 的版本  
 原因：cnpm 上的版本未同步  
 解决：用 yarn  或者 移除 镜像   
-## 插槽slot
 
-自定义组件时slot你不管放在什么位置，渲染时就是都是直接追加在你自定义内容的后面，而且放的位置不一样，虽然都是追加在后面，但是有些样式不生效，布局乱掉，位置乱掉。
-
-代码举例：
-
-```jsx
-// children.jsx
-<View className='children'>我是一个子组件</View>
-
- // parent.jsx
-<View className='parent' >
-    <View className='header'>header</View>
-    <View className='content'>
-      <children/>
-    </View>
-</View>
-```
-小程序渲染结构：
-```jsx
-// 预期渲染效果
-<View className='parent' >
-    <View className='header'>header</View>
-    <View className='content'>
-        <View className='children'>我是一个子组件</View>
-    </View>
-</View>
-// 实际渲染效果
-<View className='parent' >
-    <View className='header'>header</View>
-    <View className='content'></View>
-    <View className='children'>我是一个子组件</View>
-</View>
-```
-
-封装一个tabs组件：
-```jsx
-// 使用
-// index.jsx
-<Tabs list={['职位', '团队']} onChange={index => setTab(index)} >
-    <TabsPane index={0} current={tab}>
-       <Position />
-    </TabsPane>
-    <TabsPane index={1} current={tab}>
-      <Product /> 
-    </TabsPane>
-</Tabs>
-```
-```jsx
-// tabs.jsx
-<view className="tabs">
-  <view className="tabs-header">
-      这里切换当前tabs，执行onChange
-  </view>
-  <View className="tabs-body">
-    <slot>这里放TabsPane * n </slot>
-  </view>
-</view>
-```
-
-```jsx
-// TabsPane.jsx
-<View className={`tabs-pane ${index === current ? 'active' : ''}`} >
-    {children}
-</View>
-// scss
-.tabs-pane {
-    display:block;
-    &.active{
-        display:none;
-    }
-}
-```
-
-好了，思路清晰，代码很快写好了，美滋滋一看效果，凉凉~~    
-小朋友~~ 你是否有许多问号 ~~
-
-你预想的TabsPane结构是这样的：
-
-```jsx
-<View className="tabs-pane active" >
-    <Position />
-</View>
-<View className="tabs-pane" >
-    <Product /> 
-</View>
-```
-实际渲染结构：
-
-```jsx
-<View className="tabs-pane active" ></View>
-<Position />
-<View className="tabs-pane" ></View>
-<Product /> 
-```
-解决办法：
-```scss
-// scss
-.tabs-pane {
-    height: 0;
-    overflow: hidden;
-    &.active{
-        height: auto;
-    }
-}
-```
 
 ## 父组件传递class给自定义子组件
 【外部样式类】【全局样式类】https://nervjs.github.io/taro/docs/component-style.html
@@ -318,19 +213,15 @@ const tabList= [
       ]
 export default function Tabber(props) {
   const [current, setCurrent] = useState(props.current || 0)
+  
   const handleClick = val => {
-
     setCurrent(val)
     switch (val) {
       case 0:
-        Taro.redirectTo({
-          url: `/pages/index/index`
-        })
+        Taro.redirectTo({ url: `/pages/index/index` })
         break
       case 1:
-        Taro.redirectTo({
-          url: `/pages/jobs/index`
-        })
+        Taro.redirectTo({ url: `/pages/jobs/index` })
         break
       default:
         break
@@ -338,15 +229,18 @@ export default function Tabber(props) {
   }
 
   return (
-    <AtTabBar
-      className={isIphoneX ? 'is-phonex' : ''}
-      fixed
-      tabList={tabList}
-      fontSize={12}
-      iconSize={18}
-      onClick={handleClick}
-      current={current}
-    />
+    <View className="net-tab-bar">
+      <View className="placeholder"></View>
+      <AtTabBar
+        className={isIphoneX ? 'is-phonex' : ''}
+        fixed
+        tabList={tabList}
+        fontSize={12}
+        iconSize={18}
+        onClick={handleClick}
+        current={current}
+      />
+    </View>
   )
 }
 
@@ -354,7 +248,16 @@ export default function Tabber(props) {
 ```
 
 ```scss
-// tabber样式
+$tabBarHeight:120px;
+// tabber.scss
+.net-tab-bar {
+    .placeholder {
+        height: $tabBarHeight;
+    }
+    
+}
+
+// global.scss
 .at-tab-bar {
     height: $tabBarHeight;
 
@@ -362,15 +265,6 @@ export default function Tabber(props) {
         padding-bottom: $iphoneXFoot !important;
         background: #FFF !important;
     }
-}
-```
-
-引用了TabBar的页面，由于底部被TabBar遮挡，需要多加一个底部padding
-
-```scss
-// index.scss
-.home-index {
-    padding-bottom: $tabBarHeight;
 }
 ```
 
@@ -426,16 +320,13 @@ screenHeight - windowHeight就是默认的导航栏的高度（绿色箭头）�
  1. Android导航栏高度 =  48px ; iOS导航栏高度 =  44px (多一步计算后你会发现)
  2. 获取statusBarHeight
 
-*注：由于胶囊按钮是原生组件，为表现一直，其单位在个系统都为px，所以我们的自定义导航栏各个高度的单位都必需是px（切记不能用rpx），才能完美适配。
-
-<b>总结：</b>
+:::tip 总结
 
 * 自定义导航组件，结构一分为二：状态栏 + 标题栏
 * 状态栏高度通过wx.getSystemInfoSync().statusBarHeight获取
 * 标题栏高度：安卓：48px，iOS：44px
-* 单位必需跟胶囊按钮一致，用px
-
-
+* 单位必需跟胶囊按钮组件一致，用px
+:::
 
 选取方案二进行开发：
 ```jsx
