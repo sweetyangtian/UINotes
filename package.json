@@ -5,14 +5,19 @@
   "description": "My Notes",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vuepress dev src",
-    "docs:build": "vuepress build src"
+    "dev": "vuepress dev src --temp .temp",
+    "build": "vuepress build src"
   },
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.4.1",
     "gh-pages": "^1.1.0",
-    "vuepress": "^0.8.4"
+    "html2canvas": "^1.0.0-rc.5",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "scss-loader": "^0.0.1",
+    "vuepress": "^1.4.1"
   },
   "license": "ISC"
 }
