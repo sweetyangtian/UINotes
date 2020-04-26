@@ -10,24 +10,45 @@ module.exports = {
     themeConfig: {
         displayAllHeaders: true,
         nav: [
-          { text: '微信小程序', link: '/wechat/' },
-          { text: '开发规范', link: '/develop/' },
-          { text: '开发工具', link: '/tools/' },
-          { text: '工具函数', link: '/utils/' },
+          { 
+            text: '移动端', 
+            items: [
+              { text: '移动端', link: '/mobile/' },
+              { text: '微信小程序', link: '/wechat/' },
+             
+            ]
+          },
+          {
+            text: '开发', 
+            items: [
+              { text: '开发规范', link: '/develop/' },
+              { text: '开发工具', link: '/tools/' },
+              { text: '工具函数', link: '/utils/' },
+            ]
+          },
+          
+          
           
         ],
         // 侧边栏
         sidebar:{
           '/develop/':[
-            ['', 'GIT'],
-            ['css','CSS'],
-            ['js','JS'],
+            {
+              title: '开发规范',   // 必要的
+              children: [
+                ['', 'GIT'],
+                ['css','CSS'],
+                ['js','JS']
+              ]
+            },
             ['tools', '检查工具'],
             ['commit','检查方案']
           ],
+
           '/tools/':[
             ['', '在线工具'],
             ['git','Git'],
+            ['svn','SVN'],
             ['nvmWindows','nvmWindows']
           ],
           '/utils/':[
@@ -39,8 +60,20 @@ module.exports = {
             ['', '入门须知'],
             ['taro', '爬坑'],
             ['dev', '常见业务场景'],
-            ['share', '页面截图']
+            {
+              title:'页面截图',
+              collapsable: false,
+              sidebarDepth: 0,
+              children:[
+                'html2canvas',
+                ['share',''],
+              ]
+            }
             
+            
+          ],
+          '/mobile/':[
+            ''
           ]
         }
 

@@ -1,1 +1,1 @@
-export { default } from "E:\\learning\\MyNotes\\node_modules\\@vuepress\\plugin-back-to-top\\enhanceAppFile.js"
+export { default } from "E:\\learning\\MyBlogs\\node_modules\\@vuepress\\plugin-back-to-top\\enhanceAppFile.js"

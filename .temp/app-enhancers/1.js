@@ -1,2 +1,2 @@
-import "E:\\learning\\MyNotes\\node_modules\\@vuepress\\plugin-nprogress\\enhanceAppFile.js"
+import "E:\\learning\\MyBlogs\\node_modules\\@vuepress\\plugin-nprogress\\enhanceAppFile.js"
 export default {}

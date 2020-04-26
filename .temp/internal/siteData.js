@@ -17,7 +17,7 @@ export const siteData = {
       },
       "regularPath": "/",
       "relativePath": "README.md",
-      "key": "v-00538b78",
+      "key": "v-f4894c18",
       "path": "/"
     },
     {
@@ -25,7 +25,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/develop/",
       "relativePath": "develop/README.md",
-      "key": "v-7420fb95",
+      "key": "v-d29e8976",
       "path": "/develop/",
       "headers": [
         {
@@ -45,7 +45,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/develop/commit.html",
       "relativePath": "develop/commit.md",
-      "key": "v-52903cb8",
+      "key": "v-ad671818",
       "path": "/develop/commit.html",
       "headers": [
         {
@@ -71,52 +71,32 @@ export const siteData = {
       ]
     },
     {
-      "title": "ESLint",
+      "title": "1. ESLint",
       "frontmatter": {},
       "regularPath": "/develop/tools.html",
       "relativePath": "develop/tools.md",
-      "key": "v-364db9ea",
+      "key": "v-4282a03a",
       "path": "/develop/tools.html",
       "headers": [
         {
           "level": 2,
-          "title": "ESLint",
-          "slug": "eslint"
-        },
-        {
-          "level": 3,
-          "title": "配置ESLint的两种主要的方法：",
-          "slug": "配置eslint的两种主要的方法："
-        },
-        {
-          "level": 3,
-          "title": "规则的错误等级有三种：",
-          "slug": "规则的错误等级有三种："
-        },
-        {
-          "level": 3,
-          "title": "配置文件",
-          "slug": "配置文件"
-        },
-        {
-          "level": 3,
-          "title": "项目应用",
-          "slug": "项目应用"
+          "title": "1. ESLint",
+          "slug": "_1-eslint"
         },
         {
           "level": 2,
-          "title": "Stylelint",
-          "slug": "stylelint"
+          "title": "2. Stylelint",
+          "slug": "_2-stylelint"
         },
         {
           "level": 2,
-          "title": "Prettier",
-          "slug": "prettier"
+          "title": "3. Prettier",
+          "slug": "_3-prettier"
         },
         {
           "level": 2,
-          "title": "husky",
-          "slug": "husky"
+          "title": "4. husky",
+          "slug": "_4-husky"
         }
       ]
     },
@@ -125,7 +105,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/learnNote/css.html",
       "relativePath": "learnNote/css.md",
-      "key": "v-3a6d988a",
+      "key": "v-46a27eda",
       "path": "/learnNote/css.html",
       "headers": [
         {
@@ -136,26 +116,11 @@ export const siteData = {
       ]
     },
     {
-      "title": "5 种常见 flex 布局",
-      "frontmatter": {},
-      "regularPath": "/learnNote/flex.html",
-      "relativePath": "learnNote/flex.md",
-      "key": "v-1a0c9c12",
-      "path": "/learnNote/flex.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "5 种常见 flex 布局",
-          "slug": "_5-种常见-flex-布局"
-        }
-      ]
-    },
-    {
       "title": "网站收藏",
       "frontmatter": {},
       "regularPath": "/learnNote/",
       "relativePath": "learnNote/README.md",
-      "key": "v-89a8a6ba",
+      "key": "v-e917d75a",
       "path": "/learnNote/",
       "headers": [
         {
@@ -176,12 +141,42 @@ export const siteData = {
       ]
     },
     {
-      "title": "FontSize",
+      "title": "5 种常见 flex 布局",
       "frontmatter": {},
-      "regularPath": "/learnNote/phone.html",
-      "relativePath": "learnNote/phone.md",
-      "key": "v-4d2409ea",
-      "path": "/learnNote/phone.html",
+      "regularPath": "/learnNote/flex.html",
+      "relativePath": "learnNote/flex.md",
+      "key": "v-26bda33c",
+      "path": "/learnNote/flex.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "5 种常见 flex 布局",
+          "slug": "_5-种常见-flex-布局"
+        }
+      ]
+    },
+    {
+      "title": "SASS语法",
+      "frontmatter": {},
+      "regularPath": "/learnNote/sass.html",
+      "relativePath": "learnNote/sass.md",
+      "key": "v-063ecd10",
+      "path": "/learnNote/sass.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "SASS语法",
+          "slug": "sass语法"
+        }
+      ]
+    },
+    {
+      "title": "基础",
+      "frontmatter": {},
+      "regularPath": "/mobile/",
+      "relativePath": "mobile/README.md",
+      "key": "v-b459cad2",
+      "path": "/mobile/",
       "headers": [
         {
           "level": 2,
@@ -206,106 +201,11 @@ export const siteData = {
       ]
     },
     {
-      "title": "开发文档合集",
-      "frontmatter": {},
-      "regularPath": "/learnNote/wechart.html",
-      "relativePath": "learnNote/wechart.md",
-      "key": "v-8752ad2c",
-      "path": "/learnNote/wechart.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "开发文档合集",
-          "slug": "开发文档合集"
-        }
-      ]
-    },
-    {
-      "title": "编辑器",
-      "frontmatter": {},
-      "regularPath": "/others/",
-      "relativePath": "others/README.md",
-      "key": "v-09168e72",
-      "path": "/others/",
-      "headers": [
-        {
-          "level": 2,
-          "title": "Vs Code",
-          "slug": "vs-code"
-        },
-        {
-          "level": 3,
-          "title": "主题插件推荐",
-          "slug": "主题插件推荐"
-        },
-        {
-          "level": 3,
-          "title": "开发插件推荐",
-          "slug": "开发插件推荐"
-        },
-        {
-          "level": 3,
-          "title": "SVN",
-          "slug": "svn"
-        }
-      ]
-    },
-    {
-      "title": "SASS语法",
-      "frontmatter": {},
-      "regularPath": "/learnNote/sass.html",
-      "relativePath": "learnNote/sass.md",
-      "key": "v-2a4c0728",
-      "path": "/learnNote/sass.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "SASS语法",
-          "slug": "sass语法"
-        }
-      ]
-    },
-    {
-      "title": "svn",
-      "frontmatter": {},
-      "regularPath": "/others/svn.html",
-      "relativePath": "others/svn.md",
-      "key": "v-f8dc2b1c",
-      "path": "/others/svn.html",
-      "headers": [
-        {
-          "level": 3,
-          "title": "svn",
-          "slug": "svn"
-        }
-      ]
-    },
-    {
-      "title": "渐进式Web应用",
-      "frontmatter": {},
-      "regularPath": "/others/webApp.html",
-      "relativePath": "others/webApp.md",
-      "key": "v-1ce0ba38",
-      "path": "/others/webApp.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "渐进式Web应用",
-          "slug": "渐进式web应用"
-        },
-        {
-          "level": 3,
-          "title": "service worker技术",
-          "slug": "service-worker技术"
-        }
-      ]
-    },
-    {
       "title": "转换table格式",
       "frontmatter": {},
       "regularPath": "/tools/",
       "relativePath": "tools/README.md",
-      "key": "v-03233fd9",
+      "key": "v-9d3350ee",
       "path": "/tools/",
       "headers": [
         {
@@ -326,11 +226,26 @@ export const siteData = {
       ]
     },
     {
+      "title": "开发文档合集",
+      "frontmatter": {},
+      "regularPath": "/learnNote/wechart.html",
+      "relativePath": "learnNote/wechart.md",
+      "key": "v-25a83fba",
+      "path": "/learnNote/wechart.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "开发文档合集",
+          "slug": "开发文档合集"
+        }
+      ]
+    },
+    {
       "title": "菜鸟入门",
       "frontmatter": {},
       "regularPath": "/tools/git.html",
       "relativePath": "tools/git.md",
-      "key": "v-a03bc0ec",
+      "key": "v-416b544c",
       "path": "/tools/git.html",
       "headers": [
         {
@@ -360,7 +275,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/tools/nvmWindows.html",
       "relativePath": "tools/nvmWindows.md",
-      "key": "v-c31acadc",
+      "key": "v-14d584e2",
       "path": "/tools/nvmWindows.html",
       "headers": [
         {
@@ -401,11 +316,26 @@ export const siteData = {
       ]
     },
     {
+      "title": "svn",
+      "frontmatter": {},
+      "regularPath": "/tools/svn.html",
+      "relativePath": "tools/svn.md",
+      "key": "v-289d0d8c",
+      "path": "/tools/svn.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "svn",
+          "slug": "svn"
+        }
+      ]
+    },
+    {
       "title": "手机号码",
       "frontmatter": {},
       "regularPath": "/utils/",
       "relativePath": "utils/README.md",
-      "key": "v-5cd353ad",
+      "key": "v-0b166b5d",
       "path": "/utils/",
       "headers": [
         {
@@ -471,11 +401,31 @@ export const siteData = {
       ]
     },
     {
+      "title": "使用",
+      "frontmatter": {},
+      "regularPath": "/utils/html2canvas.html",
+      "relativePath": "utils/html2canvas.md",
+      "key": "v-6a10c80c",
+      "path": "/utils/html2canvas.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "使用",
+          "slug": "使用"
+        },
+        {
+          "level": 2,
+          "title": "参考文章",
+          "slug": "参考文章"
+        }
+      ]
+    },
+    {
       "title": "文件下载",
       "frontmatter": {},
       "regularPath": "/utils/exportAjax.html",
       "relativePath": "utils/exportAjax.md",
-      "key": "v-68e85bdc",
+      "key": "v-41eebc62",
       "path": "/utils/exportAjax.html",
       "headers": [
         {
@@ -496,31 +446,11 @@ export const siteData = {
       ]
     },
     {
-      "title": "使用",
-      "frontmatter": {},
-      "regularPath": "/utils/html2canvas.html",
-      "relativePath": "utils/html2canvas.md",
-      "key": "v-61a605aa",
-      "path": "/utils/html2canvas.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "使用",
-          "slug": "使用"
-        },
-        {
-          "level": 2,
-          "title": "参考文章",
-          "slug": "参考文章"
-        }
-      ]
-    },
-    {
       "title": "vue用户权限控制",
       "frontmatter": {},
       "regularPath": "/vueNote/Access.html",
       "relativePath": "vueNote/Access.md",
-      "key": "v-b6199d80",
+      "key": "v-7787c390",
       "path": "/vueNote/Access.html",
       "headers": [
         {
@@ -540,7 +470,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/vueNote/",
       "relativePath": "vueNote/README.md",
-      "key": "v-63281ac2",
+      "key": "v-1e089b62",
       "path": "/vueNote/",
       "headers": [
         {
@@ -560,7 +490,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/vueNote/SEO.html",
       "relativePath": "vueNote/SEO.md",
-      "key": "v-52176fca",
+      "key": "v-ea4803cc",
       "path": "/vueNote/SEO.html",
       "headers": [
         {
@@ -576,36 +506,18 @@ export const siteData = {
       ]
     },
     {
-      "title": "laravel 5.4使用vue",
       "frontmatter": {},
-      "regularPath": "/vueNote/laravel.html",
-      "relativePath": "vueNote/laravel.md",
-      "key": "v-56fc9a4a",
-      "path": "/vueNote/laravel.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "laravel 5.4使用vue",
-          "slug": "laravel-5-4使用vue"
-        },
-        {
-          "level": 2,
-          "title": "学习项目",
-          "slug": "学习项目"
-        },
-        {
-          "level": 2,
-          "title": "laravel-blade 语法",
-          "slug": "laravel-blade-语法"
-        }
-      ]
+      "regularPath": "/vueNote/ssr.html",
+      "relativePath": "vueNote/ssr.md",
+      "key": "v-6f3e1eba",
+      "path": "/vueNote/ssr.html"
     },
     {
       "title": "基础",
       "frontmatter": {},
       "regularPath": "/wechat/",
       "relativePath": "wechat/README.md",
-      "key": "v-01066667",
+      "key": "v-2ae25217",
       "path": "/wechat/",
       "headers": [
         {
@@ -631,19 +543,37 @@ export const siteData = {
       ]
     },
     {
+      "title": "laravel 5.4使用vue",
       "frontmatter": {},
-      "regularPath": "/vueNote/ssr.html",
-      "relativePath": "vueNote/ssr.md",
-      "key": "v-3679906a",
-      "path": "/vueNote/ssr.html"
+      "regularPath": "/vueNote/laravel.html",
+      "relativePath": "vueNote/laravel.md",
+      "key": "v-52944ecc",
+      "path": "/vueNote/laravel.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "laravel 5.4使用vue",
+          "slug": "laravel-5-4使用vue"
+        },
+        {
+          "level": 2,
+          "title": "学习项目",
+          "slug": "学习项目"
+        },
+        {
+          "level": 2,
+          "title": "laravel-blade 语法",
+          "slug": "laravel-blade-语法"
+        }
+      ]
     },
     {
-      "title": "页面截图",
+      "title": "Html2Canvas",
       "frontmatter": {},
-      "regularPath": "/wechat/share.html",
-      "relativePath": "wechat/share.md",
-      "key": "v-32d38f04",
-      "path": "/wechat/share.html",
+      "regularPath": "/wechat/html2canvas.html",
+      "relativePath": "wechat/html2canvas.md",
+      "key": "v-59099e14",
+      "path": "/wechat/html2canvas.html",
       "headers": [
         {
           "level": 2,
@@ -659,7 +589,17 @@ export const siteData = {
           "level": 3,
           "title": "🌰 H5页面截图",
           "slug": "h5页面截图"
-        },
+        }
+      ]
+    },
+    {
+      "title": "小程序端",
+      "frontmatter": {},
+      "regularPath": "/wechat/share.html",
+      "relativePath": "wechat/share.md",
+      "key": "v-4cadc954",
+      "path": "/wechat/share.html",
+      "headers": [
         {
           "level": 2,
           "title": "小程序端",
@@ -673,26 +613,11 @@ export const siteData = {
       ]
     },
     {
-      "title": "插槽slot",
-      "frontmatter": {},
-      "regularPath": "/wechat/slot.html",
-      "relativePath": "wechat/slot.md",
-      "key": "v-8ff7ec38",
-      "path": "/wechat/slot.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "插槽slot",
-          "slug": "插槽slot"
-        }
-      ]
-    },
-    {
-      "title": "缩进",
+      "title": "JS 代码风格",
       "frontmatter": {},
       "regularPath": "/develop/js.html",
       "relativePath": "develop/js.md",
-      "key": "v-c2e3aa00",
+      "key": "v-d67be560",
       "path": "/develop/js.html",
       "headers": [
         {
@@ -738,42 +663,17 @@ export const siteData = {
       ]
     },
     {
-      "title": "自定义底部导航栏",
+      "title": "插槽slot",
       "frontmatter": {},
-      "regularPath": "/wechat/dev.html",
-      "relativePath": "wechat/dev.md",
-      "key": "v-4d6774d0",
-      "path": "/wechat/dev.html",
+      "regularPath": "/wechat/slot.html",
+      "relativePath": "wechat/slot.md",
+      "key": "v-1e6ecf98",
+      "path": "/wechat/slot.html",
       "headers": [
         {
           "level": 2,
-          "title": "自定义底部导航栏",
-          "slug": "自定义底部导航栏"
-        },
-        {
-          "level": 2,
-          "title": "自定义顶部导航栏",
-          "slug": "自定义顶部导航栏"
-        },
-        {
-          "level": 2,
-          "title": "转发/分享",
-          "slug": "转发-分享"
-        },
-        {
-          "level": 2,
-          "title": "消息订阅",
-          "slug": "消息订阅"
-        },
-        {
-          "level": 3,
-          "title": "小踩坑",
-          "slug": "小踩坑"
-        },
-        {
-          "level": 2,
-          "title": "消息推送",
-          "slug": "消息推送"
+          "title": "插槽slot",
+          "slug": "插槽slot"
         }
       ]
     },
@@ -782,7 +682,7 @@ export const siteData = {
       "frontmatter": {},
       "regularPath": "/wechat/taro.html",
       "relativePath": "wechat/taro.md",
-      "key": "v-e78b4138",
+      "key": "v-76022498",
       "path": "/wechat/taro.html",
       "headers": [
         {
@@ -828,11 +728,51 @@ export const siteData = {
       ]
     },
     {
-      "title": "代码风格",
+      "title": "自定义底部导航栏",
+      "frontmatter": {},
+      "regularPath": "/wechat/dev.html",
+      "relativePath": "wechat/dev.md",
+      "key": "v-60ffb030",
+      "path": "/wechat/dev.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "自定义底部导航栏",
+          "slug": "自定义底部导航栏"
+        },
+        {
+          "level": 2,
+          "title": "自定义顶部导航栏",
+          "slug": "自定义顶部导航栏"
+        },
+        {
+          "level": 2,
+          "title": "转发/分享",
+          "slug": "转发-分享"
+        },
+        {
+          "level": 2,
+          "title": "消息订阅",
+          "slug": "消息订阅"
+        },
+        {
+          "level": 3,
+          "title": "小踩坑",
+          "slug": "小踩坑"
+        },
+        {
+          "level": 2,
+          "title": "消息推送",
+          "slug": "消息推送"
+        }
+      ]
+    },
+    {
+      "title": "CSS代码风格",
       "frontmatter": {},
       "regularPath": "/develop/css.html",
       "relativePath": "develop/css.md",
-      "key": "v-6d8cab2a",
+      "key": "v-b35d8d0c",
       "path": "/develop/css.html",
       "headers": [
         {
@@ -1012,36 +952,55 @@ export const siteData = {
     "displayAllHeaders": true,
     "nav": [
       {
-        "text": "微信小程序",
-        "link": "/wechat/"
+        "text": "移动端",
+        "items": [
+          {
+            "text": "移动端",
+            "link": "/mobile/"
+          },
+          {
+            "text": "微信小程序",
+            "link": "/wechat/"
+          }
+        ]
       },
       {
-        "text": "开发规范",
-        "link": "/develop/"
-      },
-      {
-        "text": "开发工具",
-        "link": "/tools/"
-      },
-      {
-        "text": "工具函数",
-        "link": "/utils/"
+        "text": "开发",
+        "items": [
+          {
+            "text": "开发规范",
+            "link": "/develop/"
+          },
+          {
+            "text": "开发工具",
+            "link": "/tools/"
+          },
+          {
+            "text": "工具函数",
+            "link": "/utils/"
+          }
+        ]
       }
     ],
     "sidebar": {
       "/develop/": [
-        [
-          "",
-          "GIT"
-        ],
-        [
-          "css",
-          "CSS"
-        ],
-        [
-          "js",
-          "JS"
-        ],
+        {
+          "title": "开发规范",
+          "children": [
+            [
+              "",
+              "GIT"
+            ],
+            [
+              "css",
+              "CSS"
+            ],
+            [
+              "js",
+              "JS"
+            ]
+          ]
+        },
         [
           "tools",
           "检查工具"
@@ -1059,6 +1018,10 @@ export const siteData = {
         [
           "git",
           "Git"
+        ],
+        [
+          "svn",
+          "SVN"
         ],
         [
           "nvmWindows",
@@ -1092,10 +1055,21 @@ export const siteData = {
           "dev",
           "常见业务场景"
         ],
-        [
-          "share",
-          "页面截图"
-        ]
+        {
+          "title": "页面截图",
+          "collapsable": false,
+          "sidebarDepth": 0,
+          "children": [
+            "html2canvas",
+            [
+              "share",
+              ""
+            ]
+          ]
+        }
+      ],
+      "/mobile/": [
+        ""
       ]
     }
   }
