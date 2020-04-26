@@ -5,7 +5,6 @@ module.exports = {
     repo:
     'https://github.com/sweetyangtian/MyBlogs', // 添加 github 链接
     dest:'./docs',
-    logo: './public/logo.jpg',
     plugins: ['@vuepress/back-to-top'],
     themeConfig: {
         displayAllHeaders: true,

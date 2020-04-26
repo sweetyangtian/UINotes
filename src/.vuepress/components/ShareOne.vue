@@ -59,11 +59,12 @@ import largePosterBg2 from "../public/largePosterBg2.png";
 import largePosterDesc from "../public/largePosterDesc.png";
 import largePosterRequire from "../public/largePosterRequire.png";
 
-const DEFAULT_DPR = 2;
+// const DEFAULT_DPR = 2; // 手机端放大倍数
 
 export default {
     data() {
         return {
+            dynamicComponent: null,
             largePosterBg1,
             largePosterBg2,
             largePosterDesc,
@@ -80,7 +81,10 @@ export default {
         };
     },
     mounted() {
-        document.body.addEventListener("touchmove", this._scrollDisabled, { passive: false });
+        import('html2canvas').then(module => {
+            Vue.use(module)
+        }) 
+        document.body.addEventListener("touchmove", this.scrollDisabled, { passive: false });
     },
     watch: {
         imgLoaded: {
@@ -92,7 +96,7 @@ export default {
         },
         isFinished(val) {
             // 当海报生成后，清除滑动的禁止行为
-            val && document.body.removeEventListener("touchmove", this._scrollDisabled, { passive: false });
+            val && document.body.removeEventListener("touchmove", this.scrollDisabled, { passive: false });
         }
     },
     methods: {
@@ -101,7 +105,7 @@ export default {
             this.isAllCompleted && this.drawCanvas(document.querySelector(".share-poster"));
         },
         drawCanvas(dom) {
-            this._getBase64(dom).then(url => {
+            this.getBase64(dom).then(url => {
                 this.isFinished = true;
                 this.imgUrl = url;
             });
@@ -109,7 +113,7 @@ export default {
         setLoaded(key) {
             this.imgLoaded[key] = true;
         },
-        _scrollDisabled(e) {
+        scrollDisabled(e) {
             e.preventDefault();
         },
 
@@ -119,13 +123,13 @@ export default {
          *
          * @return {Promise String} 图片的Base64值
          */
-        _getBase64(dom) {
+        getBase64(dom) {
             let that = this;
             return new Promise((resolve, reject) => {
                 if (!dom) return resolve("Convert to base64 failed!");
                 let isIphone = navigator.userAgent.includes("iPhone");
                 var opts = {
-                    scale: isIphone ? DEFAULT_DPR : window.devicePixelRatio,
+                    scale: 1 ,
 					useCORS: true,
 					x: document.getElementById('share-poster').offsetLeft,
                     y: document.getElementById('share-poster').offsetTop
@@ -139,7 +143,7 @@ export default {
         }
     },
     beforeDestroy() {
-        document.body.removeEventListener("touchmove", this._scrollDisabled, { passive: false });
+        document.body.removeEventListener("touchmove", this.scrollDisabled, { passive: false });
     }
 };
 </script>

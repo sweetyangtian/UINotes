@@ -8,6 +8,13 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
+      "frontmatter": {},
+      "regularPath": "/animate/animate.html",
+      "relativePath": "animate/animate.md",
+      "key": "v-36eed43a",
+      "path": "/animate/animate.html"
+    },
+    {
       "title": "Home",
       "frontmatter": {
         "home": true,
@@ -21,52 +28,87 @@ export const siteData = {
       "path": "/"
     },
     {
-      "title": "Git分支命名",
+      "title": "动画库",
       "frontmatter": {},
-      "regularPath": "/develop/",
-      "relativePath": "develop/README.md",
-      "key": "v-d29e8976",
-      "path": "/develop/",
+      "regularPath": "/animate/",
+      "relativePath": "animate/README.md",
+      "key": "v-636a2786",
+      "path": "/animate/",
       "headers": [
         {
           "level": 2,
-          "title": "Git分支命名",
-          "slug": "git分支命名"
+          "title": "Anime.js：",
+          "slug": "anime-js："
         },
         {
           "level": 2,
-          "title": "Commit格式",
-          "slug": "commit格式"
+          "title": "wow.js:",
+          "slug": "wow-js"
+        },
+        {
+          "level": 2,
+          "title": "scrollReveal.js：",
+          "slug": "scrollreveal-js："
+        },
+        {
+          "level": 2,
+          "title": "Waves",
+          "slug": "waves"
         }
       ]
     },
     {
-      "title": ".eslintrc.js",
+      "title": "CSS动画库",
       "frontmatter": {},
-      "regularPath": "/develop/commit.html",
-      "relativePath": "develop/commit.md",
-      "key": "v-ad671818",
-      "path": "/develop/commit.html",
+      "regularPath": "/animate/css.html",
+      "relativePath": "animate/css.md",
+      "key": "v-5455c1fa",
+      "path": "/animate/css.html",
       "headers": [
         {
           "level": 2,
-          "title": ".eslintrc.js",
-          "slug": "eslintrc-js"
+          "title": "Animate.css",
+          "slug": "animate-css"
         },
         {
           "level": 2,
-          "title": ".stylelintrc",
-          "slug": "stylelintrc"
-        },
+          "title": "Hover.css",
+          "slug": "hover-css"
+        }
+      ]
+    },
+    {
+      "title": "jQuery插件",
+      "frontmatter": {},
+      "regularPath": "/animate/js.html",
+      "relativePath": "animate/js.md",
+      "key": "v-6f149150",
+      "path": "/animate/js.html",
+      "headers": [
         {
           "level": 2,
-          "title": ".prettierrc.js",
-          "slug": "prettierrc-js"
+          "title": "jQuery插件",
+          "slug": "jquery插件"
         },
         {
-          "level": 2,
-          "title": "package.json",
-          "slug": "package-json"
+          "level": 3,
+          "title": "animatescroll：",
+          "slug": "animatescroll："
+        },
+        {
+          "level": 3,
+          "title": "crossfade.js",
+          "slug": "crossfade-js"
+        },
+        {
+          "level": 3,
+          "title": "Scrollbox",
+          "slug": "scrollbox"
+        },
+        {
+          "level": 3,
+          "title": "liMarquee",
+          "slug": "limarquee"
         }
       ]
     },
@@ -97,6 +139,36 @@ export const siteData = {
           "level": 2,
           "title": "4. husky",
           "slug": "_4-husky"
+        }
+      ]
+    },
+    {
+      "title": ".eslintrc.js",
+      "frontmatter": {},
+      "regularPath": "/develop/commit.html",
+      "relativePath": "develop/commit.md",
+      "key": "v-ad671818",
+      "path": "/develop/commit.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": ".eslintrc.js",
+          "slug": "eslintrc-js"
+        },
+        {
+          "level": 2,
+          "title": ".stylelintrc",
+          "slug": "stylelintrc"
+        },
+        {
+          "level": 2,
+          "title": ".prettierrc.js",
+          "slug": "prettierrc-js"
+        },
+        {
+          "level": 2,
+          "title": "package.json",
+          "slug": "package-json"
         }
       ]
     },
@@ -156,21 +228,6 @@ export const siteData = {
       ]
     },
     {
-      "title": "SASS语法",
-      "frontmatter": {},
-      "regularPath": "/learnNote/sass.html",
-      "relativePath": "learnNote/sass.md",
-      "key": "v-063ecd10",
-      "path": "/learnNote/sass.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "SASS语法",
-          "slug": "sass语法"
-        }
-      ]
-    },
-    {
       "title": "基础",
       "frontmatter": {},
       "regularPath": "/mobile/",
@@ -201,27 +258,17 @@ export const siteData = {
       ]
     },
     {
-      "title": "转换table格式",
+      "title": "SASS语法",
       "frontmatter": {},
-      "regularPath": "/tools/",
-      "relativePath": "tools/README.md",
-      "key": "v-9d3350ee",
-      "path": "/tools/",
+      "regularPath": "/learnNote/sass.html",
+      "relativePath": "learnNote/sass.md",
+      "key": "v-063ecd10",
+      "path": "/learnNote/sass.html",
       "headers": [
         {
           "level": 2,
-          "title": "转换table格式",
-          "slug": "转换table格式"
-        },
-        {
-          "level": 2,
-          "title": "富文本编辑器",
-          "slug": "富文本编辑器"
-        },
-        {
-          "level": 2,
-          "title": "nrm",
-          "slug": "nrm"
+          "title": "SASS语法",
+          "slug": "sass语法"
         }
       ]
     },
@@ -271,6 +318,41 @@ export const siteData = {
       ]
     },
     {
+      "title": "Git分支命名",
+      "frontmatter": {},
+      "regularPath": "/develop/",
+      "relativePath": "develop/README.md",
+      "key": "v-d29e8976",
+      "path": "/develop/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "Git分支命名",
+          "slug": "git分支命名"
+        },
+        {
+          "level": 2,
+          "title": "Commit格式",
+          "slug": "commit格式"
+        }
+      ]
+    },
+    {
+      "title": "svn",
+      "frontmatter": {},
+      "regularPath": "/tools/svn.html",
+      "relativePath": "tools/svn.md",
+      "key": "v-289d0d8c",
+      "path": "/tools/svn.html",
+      "headers": [
+        {
+          "level": 3,
+          "title": "svn",
+          "slug": "svn"
+        }
+      ]
+    },
+    {
       "title": "nvm-Windows",
       "frontmatter": {},
       "regularPath": "/tools/nvmWindows.html",
@@ -316,17 +398,27 @@ export const siteData = {
       ]
     },
     {
-      "title": "svn",
+      "title": "文件下载",
       "frontmatter": {},
-      "regularPath": "/tools/svn.html",
-      "relativePath": "tools/svn.md",
-      "key": "v-289d0d8c",
-      "path": "/tools/svn.html",
+      "regularPath": "/utils/exportAjax.html",
+      "relativePath": "utils/exportAjax.md",
+      "key": "v-41eebc62",
+      "path": "/utils/exportAjax.html",
       "headers": [
         {
-          "level": 3,
-          "title": "svn",
-          "slug": "svn"
+          "level": 2,
+          "title": "文件下载",
+          "slug": "文件下载"
+        },
+        {
+          "level": 2,
+          "title": "获取url中的参数",
+          "slug": "获取url中的参数"
+        },
+        {
+          "level": 2,
+          "title": "复制文字",
+          "slug": "复制文字"
         }
       ]
     },
@@ -421,31 +513,6 @@ export const siteData = {
       ]
     },
     {
-      "title": "文件下载",
-      "frontmatter": {},
-      "regularPath": "/utils/exportAjax.html",
-      "relativePath": "utils/exportAjax.md",
-      "key": "v-41eebc62",
-      "path": "/utils/exportAjax.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "文件下载",
-          "slug": "文件下载"
-        },
-        {
-          "level": 2,
-          "title": "获取url中的参数",
-          "slug": "获取url中的参数"
-        },
-        {
-          "level": 2,
-          "title": "复制文字",
-          "slug": "复制文字"
-        }
-      ]
-    },
-    {
       "title": "vue用户权限控制",
       "frontmatter": {},
       "regularPath": "/vueNote/Access.html",
@@ -506,11 +573,61 @@ export const siteData = {
       ]
     },
     {
+      "title": "转换table格式",
+      "frontmatter": {},
+      "regularPath": "/tools/",
+      "relativePath": "tools/README.md",
+      "key": "v-9d3350ee",
+      "path": "/tools/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "转换table格式",
+          "slug": "转换table格式"
+        },
+        {
+          "level": 2,
+          "title": "富文本编辑器",
+          "slug": "富文本编辑器"
+        },
+        {
+          "level": 2,
+          "title": "nrm",
+          "slug": "nrm"
+        }
+      ]
+    },
+    {
       "frontmatter": {},
       "regularPath": "/vueNote/ssr.html",
       "relativePath": "vueNote/ssr.md",
       "key": "v-6f3e1eba",
       "path": "/vueNote/ssr.html"
+    },
+    {
+      "title": "laravel 5.4使用vue",
+      "frontmatter": {},
+      "regularPath": "/vueNote/laravel.html",
+      "relativePath": "vueNote/laravel.md",
+      "key": "v-52944ecc",
+      "path": "/vueNote/laravel.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "laravel 5.4使用vue",
+          "slug": "laravel-5-4使用vue"
+        },
+        {
+          "level": 2,
+          "title": "学习项目",
+          "slug": "学习项目"
+        },
+        {
+          "level": 2,
+          "title": "laravel-blade 语法",
+          "slug": "laravel-blade-语法"
+        }
+      ]
     },
     {
       "title": "基础",
@@ -539,31 +656,6 @@ export const siteData = {
           "level": 2,
           "title": "打包过大",
           "slug": "打包过大"
-        }
-      ]
-    },
-    {
-      "title": "laravel 5.4使用vue",
-      "frontmatter": {},
-      "regularPath": "/vueNote/laravel.html",
-      "relativePath": "vueNote/laravel.md",
-      "key": "v-52944ecc",
-      "path": "/vueNote/laravel.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "laravel 5.4使用vue",
-          "slug": "laravel-5-4使用vue"
-        },
-        {
-          "level": 2,
-          "title": "学习项目",
-          "slug": "学习项目"
-        },
-        {
-          "level": 2,
-          "title": "laravel-blade 语法",
-          "slug": "laravel-blade-语法"
         }
       ]
     },
@@ -659,111 +751,6 @@ export const siteData = {
           "level": 2,
           "title": "类型转换",
           "slug": "类型转换"
-        }
-      ]
-    },
-    {
-      "title": "插槽slot",
-      "frontmatter": {},
-      "regularPath": "/wechat/slot.html",
-      "relativePath": "wechat/slot.md",
-      "key": "v-1e6ecf98",
-      "path": "/wechat/slot.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "插槽slot",
-          "slug": "插槽slot"
-        }
-      ]
-    },
-    {
-      "title": "插槽slot",
-      "frontmatter": {},
-      "regularPath": "/wechat/taro.html",
-      "relativePath": "wechat/taro.md",
-      "key": "v-76022498",
-      "path": "/wechat/taro.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "插槽slot",
-          "slug": "插槽slot"
-        },
-        {
-          "level": 2,
-          "title": "pages",
-          "slug": "pages"
-        },
-        {
-          "level": 2,
-          "title": "scroll-view 标签",
-          "slug": "scroll-view-标签"
-        },
-        {
-          "level": 2,
-          "title": "粘性布局 position:sticky",
-          "slug": "粘性布局-position-sticky"
-        },
-        {
-          "level": 2,
-          "title": "Taro 爬坑",
-          "slug": "taro-爬坑"
-        },
-        {
-          "level": 2,
-          "title": "@tarojs/cli 安装、更新失败",
-          "slug": "tarojs-cli-安装、更新失败"
-        },
-        {
-          "level": 2,
-          "title": "父组件传递class给自定义子组件",
-          "slug": "父组件传递class给自定义子组件"
-        },
-        {
-          "level": 2,
-          "title": "iphonex 底部小黑条",
-          "slug": "iphonex-底部小黑条"
-        }
-      ]
-    },
-    {
-      "title": "自定义底部导航栏",
-      "frontmatter": {},
-      "regularPath": "/wechat/dev.html",
-      "relativePath": "wechat/dev.md",
-      "key": "v-60ffb030",
-      "path": "/wechat/dev.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "自定义底部导航栏",
-          "slug": "自定义底部导航栏"
-        },
-        {
-          "level": 2,
-          "title": "自定义顶部导航栏",
-          "slug": "自定义顶部导航栏"
-        },
-        {
-          "level": 2,
-          "title": "转发/分享",
-          "slug": "转发-分享"
-        },
-        {
-          "level": 2,
-          "title": "消息订阅",
-          "slug": "消息订阅"
-        },
-        {
-          "level": 3,
-          "title": "小踩坑",
-          "slug": "小踩坑"
-        },
-        {
-          "level": 2,
-          "title": "消息推送",
-          "slug": "消息推送"
         }
       ]
     },
@@ -944,6 +931,111 @@ export const siteData = {
           "level": 3,
           "title": "注释",
           "slug": "注释"
+        }
+      ]
+    },
+    {
+      "title": "插槽slot",
+      "frontmatter": {},
+      "regularPath": "/wechat/slot.html",
+      "relativePath": "wechat/slot.md",
+      "key": "v-1e6ecf98",
+      "path": "/wechat/slot.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "插槽slot",
+          "slug": "插槽slot"
+        }
+      ]
+    },
+    {
+      "title": "插槽slot",
+      "frontmatter": {},
+      "regularPath": "/wechat/taro.html",
+      "relativePath": "wechat/taro.md",
+      "key": "v-76022498",
+      "path": "/wechat/taro.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "插槽slot",
+          "slug": "插槽slot"
+        },
+        {
+          "level": 2,
+          "title": "pages",
+          "slug": "pages"
+        },
+        {
+          "level": 2,
+          "title": "scroll-view 标签",
+          "slug": "scroll-view-标签"
+        },
+        {
+          "level": 2,
+          "title": "粘性布局 position:sticky",
+          "slug": "粘性布局-position-sticky"
+        },
+        {
+          "level": 2,
+          "title": "Taro 爬坑",
+          "slug": "taro-爬坑"
+        },
+        {
+          "level": 2,
+          "title": "@tarojs/cli 安装、更新失败",
+          "slug": "tarojs-cli-安装、更新失败"
+        },
+        {
+          "level": 2,
+          "title": "父组件传递class给自定义子组件",
+          "slug": "父组件传递class给自定义子组件"
+        },
+        {
+          "level": 2,
+          "title": "iphonex 底部小黑条",
+          "slug": "iphonex-底部小黑条"
+        }
+      ]
+    },
+    {
+      "title": "自定义底部导航栏",
+      "frontmatter": {},
+      "regularPath": "/wechat/dev.html",
+      "relativePath": "wechat/dev.md",
+      "key": "v-60ffb030",
+      "path": "/wechat/dev.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "自定义底部导航栏",
+          "slug": "自定义底部导航栏"
+        },
+        {
+          "level": 2,
+          "title": "自定义顶部导航栏",
+          "slug": "自定义顶部导航栏"
+        },
+        {
+          "level": 2,
+          "title": "转发/分享",
+          "slug": "转发-分享"
+        },
+        {
+          "level": 2,
+          "title": "消息订阅",
+          "slug": "消息订阅"
+        },
+        {
+          "level": 3,
+          "title": "小踩坑",
+          "slug": "小踩坑"
+        },
+        {
+          "level": 2,
+          "title": "消息推送",
+          "slug": "消息推送"
         }
       ]
     }
