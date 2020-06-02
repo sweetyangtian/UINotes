@@ -9,6 +9,14 @@ module.exports = {
     themeConfig: {
         displayAllHeaders: true,
         nav: [
+          {
+            text: '开发', 
+            items: [
+              { text: '开发规范', link: '/develop/' },
+              { text: '工具函数', link: '/utils/' },
+              { text: '开发工具', link: '/tools/' },
+            ]
+          },
           { 
             text: '移动端', 
             items: [
@@ -17,17 +25,15 @@ module.exports = {
              
             ]
           },
+
           {
-            text: '开发', 
-            items: [
-              { text: '开发规范', link: '/develop/' },
-              { text: '开发工具', link: '/tools/' },
-              { text: '工具函数', link: '/utils/' },
+            text: '框架',
+            items:[
+              { text: 'Vue', link: '/vue/', sidebarDepth: 3 },
             ]
           },
-          
-          
-          
+          { text: '基础', link:'/basis/', sidebarDepth: 3 }
+
         ],
         // 侧边栏
         sidebar:{
@@ -52,8 +58,7 @@ module.exports = {
           ],
           '/utils/':[
             ['', '常用校验'],
-            ['exportAjax', '工具类'], 
-            ['html2canvas', 'html2canvas'],
+            ['exportAjax', '工具类']
           ],
           '/wechat/':[
             ['', '入门须知'],
@@ -65,14 +70,31 @@ module.exports = {
               sidebarDepth: 0,
               children:[
                 'html2canvas',
-                ['share',''],
+                ['share','小程序'],
               ]
             }
             
             
           ],
           '/mobile/':[
-            ''
+            {
+              title:'入门基础',
+              sidebarDepth: 3,
+              children:[
+                '',
+                'question'
+              ]
+            }
+           
+          ],
+          '/vue/':[
+            ['', '项目合集'],
+            ['laravel','Laravel']
+          ],
+          '/basis/':[
+            ['','资源网站'],
+            ['css','CSS'],
+            ['sass','SASS']
           ]
         }
 

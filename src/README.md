@@ -1,7 +1,7 @@
 ---
 home: true
 actionText: 开始学习 →
-actionLink: /learning/
+actionLink: /develop/
 # features:
 # - title: 公共组件
 #   details: 杂记

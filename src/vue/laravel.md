@@ -1,18 +1,22 @@
-## laravel 5.4使用vue
-> [laravel 学院 ](http://laravelacademy.org/)
+## Laravel
 
-> [composer](http://www.phpcomposer.com/ )
+Laravel是一套简洁、优雅的PHP Web开发框架(PHP Web Framework) 
 
-> [composer镜像](https://pkg.phpcomposer.com/ )
+## Laravel 项目使用vue
 
-> [laravel安装](http://laravelacademy.org/post/6665.html )
+[laravel 学院 ](http://laravelacademy.org/)
 
-> [Laravel Mix]( http://laravelacademy.org/post/6798.html )
+主要学习模块：
+- 安装
+- 目录结构
+- Blade 模板
+- [Laravel Mix](http://laravelacademy.org/post/6798.html )
 
-> [從 0.8.1 升級至目前最新的 1.4.2 版本踩坑](    https://neighborhood999.github.io/2017/08/07/upldate-laravel-mix-from-0-x-1-x/ )
+[composer](http://www.phpcomposer.com/ )，[composer镜像](https://pkg.phpcomposer.com/ )
+
 
 ## 学习项目
->[运用laravel5.4 + vue2.0 + elementui，从零搭建一个技术博客](https://github.com/linlianmin/laravel-vue)
+[运用laravel5.4 + vue2.0 + elementui，从零搭建一个技术博客](https://github.com/linlianmin/laravel-vue)
 
 ## laravel-blade 语法
 ```php
@@ -21,7 +25,7 @@
 ```
 ```php
 //可以使用 @ 符号来告诉 Blade 渲染引擎该表达式应该保持原生格式不作改动,@ 符将会被 Blade 移除，但是，{{ name }}表达式将会保持不变
-<h1> Hello, @{{ name }}. </h1>  
+<h1Hello, @{{ name }}. </h1 
 	
 ```
 ```php
@@ -36,7 +40,7 @@
 //If 语句
 @if (count($records) === 1)
     I have one record!
-@elseif (count($records) > 1)
+@elseif (count($records) 1)
     I have multiple records!
 @else
     I don't have any records!

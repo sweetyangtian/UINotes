@@ -225,7 +225,7 @@ export function getGlobalData(key) {
 ```scss
 $iphoneXFoot:68px; // iphoneX底部小黑条
 ```
-4、A 使用全局变量控制类名
+4、使用全局变量控制类名
 ```jsx
 // 获取全局变量
 const isIphoneX = getGlobalData('isIphoneX')

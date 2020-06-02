@@ -1,15 +1,14 @@
 ## Html2Canvas
 
-- 特点：   
-只需简单调用并设定配置项即可。脚本使用的所有图像需要驻留在同一个源下，如果页面上有其他画布元素，这些元素已经被跨源内容污染，不再能被html2canvas读取。
+- 实现功能：   
+HTML页面保存为图片，常见于H5活动页分享。
+官方github地址：[https://github.com/niklasvh/html2canvas](https://github.com/niklasvh/html2canvas)
 
 - 原理：   
 将DOM改写为canvas，然后利用canvas的toDataURL方法实现将DOM输出为包含图片展示的data url，将URL赋值给img标签src即可
 
-- 适用：  
-web端、H5等有dom结构的页面
-
 - 注意：
+    - 适用于web端、H5等有dom结构的页面
     - 注意图片元素加载完成后再调用 html2canvas
     - 浏览器有滚动条时，或者元素需要定位时，需要指定截图的起始位置
     - 图片中有链接地址时，设置useCORS属性可保证图片的加载
@@ -26,7 +25,7 @@ web端、H5等有dom结构的页面
 | windowWidth	| Window.innerWidth	| 渲染元素时使用的窗口宽度
 | windowHeight	| Window.innerHeght	| 染时使用的窗口高度 Element
 
-### :chestnut: PC端整个页面截图
+### :chestnut: web端整个页面截图
 
 ```js
 html2canvas(document.body, {
@@ -38,12 +37,16 @@ html2canvas(document.body, {
     x:0,
     y: window.scrollY
 }).then(canvas => {
-    const url = canvas.toDataURL();
+    const url = canvas.toDataURL(); // canvas转url，赋值给image元素的src属性
 });
 ```
 
-### :chestnut: H5页面截图
 
-<!-- - 简单模拟，存在小问题，H5页面的时候使用定位占据整个窗口宽高即可 -->
+<!-- ### :chestnut: H5页面截图
 
-<!-- <ShareOne/> -->
+简单模拟，存在小问题，H5页面的时候使用定位占据整个窗口宽高即可 -->
+<!-- <ClientOnly>
+<ShareOne/>
+</ClientOnly> -->
+
+

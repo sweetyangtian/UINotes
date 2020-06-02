@@ -26,10 +26,10 @@
                 <div id="share-poster" class="share-poster">
                     <img :src="largePosterBg1" alt="bg-header" class="header" @load="setLoaded('largePosterBg1')" />
                     <div class="container">
-                        <div class="title">渠道商务大客户销售 - 有道事业群704</div>
+                        <div class="title">渠道商务大客户销售</div>
                         <div class="sec-title">全职 / 产品 / 杭州市 / 3-5年 / 本科</div>
                         <img :src="largePosterDesc" alt="desc" class="icon" @load="setLoaded('largePosterDesc')" />
-                        <div class="text">1、 参与网易游戏数据平台及相关数据产品的前端开发工作；
+                        <div class="text">1、 参与游戏数据平台及相关数据产品的前端开发工作；
                         2、 参与具体需求的开发流程，与服务端开发、设计、产品人员沟通，保证产品的质量和开发进度； 
                         3、 负责前端工程化建设，包括业务组件开发，性能优化，提升产品用户体验； 
                         </div>
